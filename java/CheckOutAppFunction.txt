@@ -1,0 +1,42 @@
+public class CheckOutAppFunction{
+
+String[] names = new String[2];
+String[][] product = {{null, null, null, null},{null, null, null, null},{null, null, null}, null};
+int addUp = 
+
+public static String names(String customerName,  String cashierName){
+names[0] = customerName;
+names[1] = cashierName;
+return names;
+}
+
+public static String productBox{String item, int pieces, int price,}
+int total = pieces * price;
+for(int count = 0; count < product.length; count++){
+	for(int counter = 0; counter < product.length; counter++){
+		if(product[count] == null){
+		product[counter] = item;
+		product[counter] = pieces;
+		product[counter] = price;
+		product[counter] = total;
+		}
+	}
+return product
+}
+
+/*public static int calculations(String item, int pieces, int price, int discount){
+
+
+
+}*/
+
+
+
+
+
+
+
+
+
+
+}
