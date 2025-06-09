@@ -1,42 +1,40 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CheckOutAppFunction{
 
-static ArrayList<ArrayList<String>> productList = new ArrayList<>();
-static ArrayList<String> namesused = new ArrayList<>();
-static double[] itemTotal = new double[1];
-static double discountSum = 0;
-static double vatSum = 0;
-static double vatAmount = 17.50;
-static double totalBill = 0;
+productList = []
+namesused = []
+itemTotal = []
+discountSum = 0;
+vatSum = 0;
+vatAmount = 17.50;
+totalBill = 0;
 
-public static ArrayList<String> named(String customerName,  String cashierName){
-ArrayList<String> nameuser = new ArrayList<>();
-namesused.add(customerName);
-namesused.add(cashierName);
-return namesused;
-}
-
-public static ArrayList<ArrayList<String>> addItem(String item, int pieces, double price ){
-ArrayList<String> productss = productBox(item, pieces, price);
-productList.add(productss);
-return productList;
-}
+def named(customerName, cashierName):
+	nameuser = []
+	namesused.append(customerName);
+	namesused.append(cashierName);
+	return namesused;
 
 
-public static ArrayList<String> productBox(String item, int pieces, double price){
-ArrayList<String> products = new ArrayList<>();
-products.add(item);
-products.add(Integer.toString(pieces));
-products.add(Double.toString(price));
+def addItem(item, pieces, price):
+	productss = productBox(item, pieces, price);
+	productList.append(productss);
+	return productList;
 
-double total = pieces * price;
 
-products.add(Double.toString(total));
 
-return products;
-}
+def productBox(item, pieces, price):
+	products = []
+	products.append(item);
+	products.append(pieces);
+	products.append(price);
+
+	total = pieces * price;
+
+	products.append(total);
+
+	return products;
+
 
 public static double[] calculation(int pieces, double price ){
 double[] added = total(pieces, price);
@@ -89,12 +87,3 @@ return itemTotal;
 
 public static double discounts(){
 return discountSum;
-}
-
-
-
-
-
-
-
-}
