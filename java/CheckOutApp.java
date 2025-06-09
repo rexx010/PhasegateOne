@@ -24,12 +24,14 @@ boolean hold = true;
 while(hold){
 System.out.println(message);
 int userChoice = input.nextInt();
+System.out.println();
 switch(userChoice){
 case 1:
 	String output = """
 Enter each product detials in the user's cart...
 ================================================""";
 	System.out.println(output);
+	System.out.println();
 	
 	String product = null;
 	int pieces = 0;
@@ -69,6 +71,10 @@ Enter each product detials in the user's cart...
 	System.out.println(names);
 	System.out.println(productList);
 
+
+	break;
+
+case 2:
 	ArrayList<ArrayList<String>> itemList = CheckOutAppFunction.addMore();
 	System.out.println(itemList);
 	break;

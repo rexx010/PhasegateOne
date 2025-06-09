@@ -34,6 +34,8 @@ return products;
 
 
 public static ArrayList<ArrayList<String>> addMore(){
+
+System.out.println("SEMICOLON STORES \nMAIN BRANCH\nLOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS.\nTEL: 03293828343\nDATE: 18-DEC-22 8:48:11 pm");
 return productList;
 
 
