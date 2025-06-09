@@ -33,27 +33,29 @@ while True:
 
 			print("What is the customer's name?");
 			customerName = input.next();
+			
+			decision = yes;
+			while True:
+				print("What did the user buy?");
+				product = input();
 
-			do{
-			print("What did the user buy?");
-			product = input();
+				print("How many pieces?");
+				pieces = input();
 
-			print("How many pieces?");
-			pieces = input();
+				print("How much per unit?");
+				prices = float(input());
 
-			print("How much per unit?");
-			prices = float(input());
+				product_list = CheckOutAppFunction.addItem(product, pieces, prices);
+				CheckOutAppFunction.calculation(pieces, prices);
 
-			product_list = CheckOutAppFunction.addItem(product, pieces, prices);
-			CheckOutAppFunction.calculation(pieces, prices);
+				print("Add more items?");
+				decision = input();
 
-			print("Add more items?");
-			decision = input();
-
-			}while(decision.equals("yes"));
+				if decison == no:
+					break
 
 			print("What is your name?");
-			cashierName = input.next();
+			cashierName = input();
 
 			print("How much discount will he/she get?");
 			discount = int(input());
@@ -79,7 +81,7 @@ while True:
 			print("=================================================================================================");
 			billSum = billSum + sumed[0];
 			billSum = billSum - discountSummed + vated;
-			print("\t\t\t\t\tBill Total: {billSum}");
+			print(f"\t\t\t\t\tBill Total: {billSum}");
 			print("=================================================================================================");
 			print("THIS IS NOT AN RECEIPT KINDLY PAY "+billSum);
 			print("=================================================================================================");
@@ -98,29 +100,29 @@ while True:
 			print();
 			sumed = CheckOutAppFunction.addMoreTotal();
 			for sum in sumed:
-				print("\t\t\t\t\tSub Total: "+sum);
-	}
-	discountSummed = CheckOutAppFunction.discounts();
-	print("\t\t\t\t\tDiscount: "+discountSummed);
-	print("\t\t\t\t\tVAT @ 17.50%: "+vated);
-	print("=================================================================================================");
-	print("\t\t\t\t\tBill Total: "+billSum);
-	print("\t\t\t\t\tAmount Paid "+payment);
-	balance = billSum - payment;
-	balance = Math.abs(balance);
-	print("\t\t\t\t\tBalance "+balance);
-	print("=================================================================================================");
-	print("THANKS YOU FOR YOUR PATRONAGE");
-	print("=================================================================================================");
-	print();
-	print();
-	print();
-	break;
+				print("\t\t\t\t\tSub Total: {sum}");
+	
+			discountSummed = CheckOutAppFunction.discounts();
+			print(f"\t\t\t\t\tDiscount: {discountSummed}");
+			print(f"\t\t\t\t\tVAT @ 17.50%: {vated}");
+			print("=================================================================================================");
+			print(f"\t\t\t\t\tBill Total: {billSum}");
+			print(f"\t\t\t\t\tAmount Paid {payment}");
+			balance = billSum - payment;
+			balance = Math.abs(balance);
+			print("\t\t\t\t\tBalance: {balance}");
+			print("=================================================================================================");
+			print("THANKS YOU FOR YOUR PATRONAGE");
+			print("=================================================================================================");
+			print();
+			print();
+			print();
 
-case 0:
-	hold = false;
-	print("GoodBye");
-	break;
-case _::
-	print("Invalid input");
+
+		case 0:
+			hold = false;
+			print("GoodBye");
+
+		case _::
+			print("Invalid input");
 
