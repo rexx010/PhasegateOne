@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class CheckOutAppFunction{
 
 static ArrayList<ArrayList<String>> productList = new ArrayList<>();
+static ArrayList<ArrayList<Integer>> itemTotal = new ArrayList<>();
 
 public static ArrayList<String> named(String customerName,  String cashierName){
 ArrayList<String> nameuser = new ArrayList<>();
@@ -25,7 +26,10 @@ ArrayList<String> products = new ArrayList<>();
 products.add(item);
 products.add(Integer.toString(pieces));
 products.add(Integer.toString(price));
+
 int total = pieces * price;
+itemTotal.add(total);
+
 products.add(Integer.toString(total));
 
 return products;
@@ -36,6 +40,9 @@ return products;
 public static ArrayList<ArrayList<String>> addMore(){
 
 System.out.println("SEMICOLON STORES \nMAIN BRANCH\nLOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS.\nTEL: 03293828343\nDATE: 18-DEC-22 8:48:11 pm");
+System.out.println("Cashier: "+itemTotal.get(1));
+System.out.println("Customer Name: "+itemTotal.get(0));
+System.out.println("=======================================================================================================");
 return productList;
 
 
