@@ -36,9 +36,9 @@ def productBox(item, pieces, price):
 
 
 def calculation(pieces, price):
-	itemTotal = total(pieces, price);
-	itemTotal2 = sum(itemTotal);
-	return itemTotal2;
+	num1 = pieces * price;
+	itemTotal.append(num1);
+	return itemTotal;
 
 
 '''def total(pieces, price):
@@ -49,19 +49,21 @@ def calculation(pieces, price):
 
 def discountCalculation(discount):
 	discountSum = discount / 100;
-	cal = sum(itemTotal2)
+	cal = sum(itemTotal)
 	discountSum = discountSum * cal;
 	return discountSum;
 
 
 def vatCalculation():
 	vatSum = vatAmount / 100;
-	vatSum = vatSum * itemTotal;
+	cal2 = sum(itemTotal)
+	vatSum = vatSum * cal2;
 	return vatSum;
 
 
 def billCalculation():
-	totalBill = totalBill + itemTotal;
+	cal3 = sum(itemTotal)
+	totalBill = totalBill + cal3;
 	return totalBill;
 
 

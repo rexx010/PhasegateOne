@@ -68,18 +68,19 @@ while True:
 			print();
 			
 			sumed = CheckOutAppFunction.addMoreTotal();
-			print(f"\t\t\t\t\tSub Total: {sumed}");
+			num = sum(sumed)
+			print(f"\t\t\t\t\tSub Total: {num}");
 
 			discountSummed = CheckOutAppFunction.discounts();
 			print(f"\t\t\t\t\tDiscount: {discountSummed}");
-			vated = (vated / 100) * sum(sumed);
-			print("\t\t\t\t\tVAT @ 17.50%: {vated}");
+			vated = (vated / 100) * num;
+			print(f"\t\t\t\t\tVAT @ 17.50%: {vated}");
 			print("=================================================================================================");
-			billSum = billSum + sumed[0];
+			billSum = billSum + num;
 			billSum = billSum - discountSummed + vated;
 			print(f"\t\t\t\t\tBill Total: {billSum}");
 			print("=================================================================================================");
-			print("THIS IS NOT AN RECEIPT KINDLY PAY "+billSum);
+			print(f"THIS IS NOT AN RECEIPT KINDLY PAY {billSum}");
 			print("=================================================================================================");
 			print();
 			print();
