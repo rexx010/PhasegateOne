@@ -36,7 +36,7 @@ Enter each product detials in the user's cart...
 	
 	String product = null;
 	int pieces = 0;
-	int prices = 0;
+	double prices = 0;
 	String decision = "yes";
 
 	System.out.println("What is the customer's name?");
@@ -51,7 +51,7 @@ Enter each product detials in the user's cart...
 	pieces = input.nextInt();
 
 	System.out.println("How much per unit?");
-	prices = input.nextInt();
+	prices = input.nextDouble();
 
 	productList = CheckOutAppFunction.addItem(product, pieces, prices);
 	CheckOutAppFunction.calculation(pieces, prices);
@@ -79,7 +79,7 @@ Enter each product detials in the user's cart...
 case 2:
 	ArrayList<ArrayList<String>> itemList = CheckOutAppFunction.addMore();
 	System.out.println(itemList);
-	int [] sumed = CheckOutAppFunction.addMoreTotal();
+	double [] sumed = CheckOutAppFunction.addMoreTotal();
 	System.out.println(Arrays.toString(sumed));
 	break;
 

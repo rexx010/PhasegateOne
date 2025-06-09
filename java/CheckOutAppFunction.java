@@ -5,7 +5,7 @@ public class CheckOutAppFunction{
 
 static ArrayList<ArrayList<String>> productList = new ArrayList<>();
 static ArrayList<String> namesused = new ArrayList<>();
-static int[] itemTotal = new int[1];
+static double[] itemTotal = new double[1];
 
 public static ArrayList<String> named(String customerName,  String cashierName){
 ArrayList<String> nameuser = new ArrayList<>();
@@ -14,35 +14,35 @@ namesused.add(cashierName);
 return namesused;
 }
 
-public static ArrayList<ArrayList<String>> addItem(String item, int pieces, int price ){
+public static ArrayList<ArrayList<String>> addItem(String item, int pieces, double price ){
 ArrayList<String> productss = productBox(item, pieces, price);
 productList.add(productss);
 return productList;
 }
 
 
-public static ArrayList<String> productBox(String item, int pieces, int price){
+public static ArrayList<String> productBox(String item, int pieces, double price){
 ArrayList<String> products = new ArrayList<>();
 products.add(item);
 products.add(Integer.toString(pieces));
-products.add(Integer.toString(price));
+products.add(Double.toString(price));
 
-int total = pieces * price;
+double total = pieces * price;
 
-products.add(Integer.toString(total));
+products.add(Double.toString(total));
 
 return products;
 }
 
-public static int[] calculation(int pieces, int price ){
-int[] added = total(pieces, price);
+public static double[] calculation(int pieces, double price ){
+double[] added = total(pieces, price);
 itemTotal[0] = itemTotal[0] + added[0];
 return itemTotal;
 }
 
-public static int  []total(int pieces, int price ){
-int[] addTo = new int[1];
-int sum = pieces * price;
+public static double  []total(int pieces, double price ){
+double[] addTo = new double[1];
+double sum = pieces * price;
 addTo[0] = addTo[0] + sum;
 return addTo;
 }
@@ -55,14 +55,14 @@ System.out.println("SEMICOLON STORES \nMAIN BRANCH\nLOCATION: 312, HERBERT MACAU
 System.out.println("Cashier: "+namesused.get(1));
 System.out.println("Customer Name: "+namesused.get(0));
 System.out.println("=======================================================================================================");
-
+System.out.println("\t\t\tITEM\tQUANTITY\tPRICE\tTOTAL(NGN)");
 System.out.println();
 return productList;
 
 
 }
 
-public static int[] addMoreTotal(){
+public static double[] addMoreTotal(){
 
 return itemTotal;
 }
