@@ -71,8 +71,8 @@ while True:
 			print(f"\t\t\t\t\tSub Total: {sumed}");
 
 			discountSummed = CheckOutAppFunction.discounts();
-			print(f"\t\t\t\t\tDiscount: discountSummed");
-			vated = (vated / 100) * sumed[0];
+			print(f"\t\t\t\t\tDiscount: {discountSummed}");
+			vated = (vated / 100) * sum(sumed);
 			print("\t\t\t\t\tVAT @ 17.50%: {vated}");
 			print("=================================================================================================");
 			billSum = billSum + sumed[0];

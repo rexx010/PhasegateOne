@@ -1,6 +1,8 @@
 productList = []
 namesused = []
-itemTotal = 0
+itemTotal = []
+itemTotal2 = []
+total_list = []
 discountSum = 0;
 vatSum = 0;
 vatAmount = 17.50;
@@ -34,20 +36,21 @@ def productBox(item, pieces, price):
 
 
 def calculation(pieces, price):
-	added = total(pieces, price);
-	itemTotal = 0
-	itemTotal = itemTotal + added;
-	return itemTotal;
+	itemTotal = total(pieces, price);
+	itemTotal2 = sum(itemTotal);
+	return itemTotal2;
 
 
-def total(pieces, price):
+'''def total(pieces, price):
 	sum = pieces * price;
-	return sum;
+	total_list.append(sum)
+	return total_list;'''
 
 
 def discountCalculation(discount):
 	discountSum = discount / 100;
-	discountSum = discountSum * itemTotal;
+	cal = sum(itemTotal2)
+	discountSum = discountSum * cal;
 	return discountSum;
 
 
