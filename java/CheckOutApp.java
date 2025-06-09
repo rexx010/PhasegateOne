@@ -7,7 +7,7 @@ public static void main(String[] args){
 Scanner input = new Scanner(System.in);
 
 //ArrayList<String> names = new ArrayList<>();
-ArrayList<String> productList = new ArrayList<>();
+ArrayList<ArrayList<String>> productList = new ArrayList<>();
 //ArrayList<String> price = new ArrayList<>();
 
 String message = """
@@ -50,7 +50,7 @@ Enter each product detials in the user's cart...
 	System.out.println("How much per unit?");
 	prices = input.nextInt();
 
-	productList = CheckOutAppFunction.productBox(product, pieces, prices);
+	productList = CheckOutAppFunction.addItem(product, pieces, prices);
 
 	System.out.println("Add more items?");
 	decision = input.next();
@@ -69,7 +69,8 @@ Enter each product detials in the user's cart...
 	System.out.println(names);
 	System.out.println(productList);
 
-	ArrayList<String> itemList = CheckOutAppFunction.list(productList);
+	ArrayList<ArrayList<String>> itemList = CheckOutAppFunction.addMore();
+	System.out.println(itemList);
 	break;
 
 case 0:

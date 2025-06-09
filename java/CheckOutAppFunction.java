@@ -2,12 +2,21 @@ import java.util.ArrayList;
 
 public class CheckOutAppFunction{
 
+static ArrayList<ArrayList<String>> productList = new ArrayList<>();
 
 public static ArrayList<String> named(String customerName,  String cashierName){
 ArrayList<String> nameuser = new ArrayList<>();
 nameuser.add(customerName);
 nameuser.add(cashierName);
 return nameuser;
+}
+
+public static ArrayList<ArrayList<String>> addItem(String item, int pieces, int price ){
+ArrayList<String> productss = productBox(item, pieces, price);
+productList.add(productss);
+
+return productList;
+
 }
 
 
@@ -23,17 +32,12 @@ return products;
 }
 
 
-public static ArrayList<String> list(ArrayList<String> one){
-ArrayList<String> productList = new ArrayList<>();
-productList.add(one);
+
+public static ArrayList<ArrayList<String>> addMore(){
 return productList;
+
+
 }
-
-/*public static ArrayList<String> addMore(ArrayList<String> productList, String item, int pieces, int price){
-
-
-
-}*/
 
 
 
