@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CheckOutApp{
 public static void main(String[] args){
@@ -8,7 +9,7 @@ Scanner input = new Scanner(System.in);
 
 //ArrayList<String> names = new ArrayList<>();
 ArrayList<ArrayList<String>> productList = new ArrayList<>();
-//ArrayList<String> price = new ArrayList<>();
+//ArrayList<Integer> price = new ArrayList<>();
 
 String message = """
 WELCOME TO SEMICOLON STORE:
@@ -53,6 +54,7 @@ Enter each product detials in the user's cart...
 	prices = input.nextInt();
 
 	productList = CheckOutAppFunction.addItem(product, pieces, prices);
+	CheckOutAppFunction.calculation(pieces, prices);
 
 	System.out.println("Add more items?");
 	decision = input.next();
@@ -77,6 +79,8 @@ Enter each product detials in the user's cart...
 case 2:
 	ArrayList<ArrayList<String>> itemList = CheckOutAppFunction.addMore();
 	System.out.println(itemList);
+	int [] sumed = CheckOutAppFunction.addMoreTotal();
+	System.out.println(Arrays.toString(sumed));
 	break;
 
 case 0:
