@@ -1,6 +1,7 @@
 import CheckOutAppFunction
 
 product_list = []
+sumed = []
 vated = 17.50;
 billSum = 0;
 payment = 0;
@@ -18,29 +19,27 @@ press 0 to close app.
 
 while True:
 	print(message);
-	userChoice = input.next();
+	userChoice = input();
 	print();
 	match(userChoice):
-		case 1:
-	 		output = "Enter each product detials in the user's cart...\n================================================"
-			print(output);
-			print();
-	
-	 		product = null;
-	 		pieces = 0;
-	 		prices = 0;
+		case '1':
+			print("Enter each product detials in the user's cart...\n================================================")
+			print()
+			product = '';
+			pieces = 0;
+			prices = 0;
 			decision = "yes";
 
 			print("What is the customer's name?");
-			customerName = input.next();
+			customerName = input();
 			
-			decision = yes;
+			decision = 'yes';
 			while True:
 				print("What did the user buy?");
 				product = input();
 
 				print("How many pieces?");
-				pieces = input();
+				pieces = int(input());
 
 				print("How much per unit?");
 				prices = float(input());
@@ -51,7 +50,7 @@ while True:
 				print("Add more items?");
 				decision = input();
 
-				if decison == no:
+				if decison == 'no':
 					break
 
 			print("What is your name?");
@@ -63,14 +62,14 @@ while True:
 
 			CheckOutAppFunction.named(customerName, cashierName);
 
-		case 2:
+		case '2':
 			itemList = CheckOutAppFunction.addMore();
 
 			for index, value in itemList:
 				print(f"\t {value} ");
 			print();
 			
-			[] sumed = CheckOutAppFunction.addMoreTotal();
+			sumed = CheckOutAppFunction.addMoreTotal();
 			for sum in sumed:
 				print(f"\t\t\t\t\tSub Total: {sum}");
 
@@ -92,7 +91,7 @@ while True:
 			payment = int(input());
 
 
-		case 3:
+		case '3':
 			itemList = CheckOutAppFunction.addMore();
 
 			for index, value in itemList:
@@ -119,10 +118,10 @@ while True:
 			print();
 
 
-		case 0:
+		case '0':
 			hold = false;
 			print("GoodBye");
 
-		case _::
+		case '_':
 			print("Invalid input");
 
