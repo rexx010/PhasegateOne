@@ -83,16 +83,26 @@ Enter each product detials in the user's cart...
 
 case 2:
 	ArrayList<ArrayList<String>> itemList = CheckOutAppFunction.addMore();
-	System.out.println(itemList);
+
+	for(ArrayList<String> items : itemList){
+	for(String item : items){
+	System.out.print("\t"+"  "+item+"  ");
+	}
+	System.out.println();
+	}
+
 	double [] sumed = CheckOutAppFunction.addMoreTotal();
-	System.out.println(Arrays.toString(sumed));
+	for(double sum : sumed){
+	System.out.println("\t\t\t\t\tSub Total: "+sum);
+	}
 	double discountSummed = CheckOutAppFunction.discounts();
-	System.out.println("Discount: "+discountSummed);
+	System.out.println("\t\t\t\t\tDiscount: "+discountSummed);
 	vated = (vated / 100) * sumed[0];
-	System.out.println("VAT @ 17.50%: "+vated);
+	System.out.println("\t\t\t\t\tVAT @ 17.50%: "+vated);
 	System.out.println("=================================================================================================");
 	billSum = billSum + sumed[0];
-	System.out.println("Bill Total: "+billSum);
+	billSum = billSum - discountSummed + vated;
+	System.out.println("\t\t\t\t\tBill Total: "+billSum);
 	System.out.println("=================================================================================================");
 	System.out.println("THIS IS NOT AN RECEIPT KINDLY PAY "+billSum);
 	System.out.println("=================================================================================================");
@@ -105,18 +115,27 @@ case 2:
 
 case 3:
 	itemList = CheckOutAppFunction.addMore();
-	System.out.println(itemList);
+
+	for(ArrayList<String> items : itemList){
+	for(String item : items){
+	System.out.print("\t"+"  "+item+"  ");
+	}
+	System.out.println();
+	}
+
 	sumed = CheckOutAppFunction.addMoreTotal();
-	System.out.println(Arrays.toString(sumed));
+	for(double sum : sumed){
+	System.out.println("\t\t\t\t\tSub Total: "+sum);
+	}
 	discountSummed = CheckOutAppFunction.discounts();
-	System.out.println("Discount: "+discountSummed);
-	System.out.println("VAT @ 17.50%: "+vated);
+	System.out.println("\t\t\t\t\tDiscount: "+discountSummed);
+	System.out.println("\t\t\t\t\tVAT @ 17.50%: "+vated);
 	System.out.println("=================================================================================================");
-	billSum = billSum + sumed[0];
-	System.out.println("Bill Total: "+billSum);
-	System.out.println("Amount Paid "+payment);
+	System.out.println("\t\t\t\t\tBill Total: "+billSum);
+	System.out.println("\t\t\t\t\tAmount Paid "+payment);
 	balance = billSum - payment;
-	System.out.println("Balance "+balance);
+	balance = Math.abs(balance);
+	System.out.println("\t\t\t\t\tBalance "+balance);
 	System.out.println("=================================================================================================");
 	System.out.println("THANKS YOU FOR YOUR PATRONAGE");
 	System.out.println("=================================================================================================");
