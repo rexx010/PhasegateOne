@@ -51,6 +51,7 @@ def discountCalculation(discount):
 	discountSum = discount / 100;
 	cal = sum(itemTotal)
 	discountSum = discountSum * cal;
+
 	return discountSum;
 
 
@@ -86,4 +87,5 @@ def addMoreTotal():
 
 
 def discounts():
+
 	return discountSum;

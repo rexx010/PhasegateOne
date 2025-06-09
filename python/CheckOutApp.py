@@ -1,4 +1,5 @@
 import CheckOutAppFunction
+import math
 
 product_list = []
 sumed = []
@@ -58,7 +59,7 @@ while True:
 
 			print("How much discount will he/she get?");
 			discount = int(input());
-			CheckOutAppFunction.discountCalculation(discount);
+			discountSummed = CheckOutAppFunction.discountCalculation(discount);
 
 			CheckOutAppFunction.named(customerName, cashierName);
 
@@ -71,7 +72,7 @@ while True:
 			num = sum(sumed)
 			print(f"\t\t\t\t\tSub Total: {num}");
 
-			discountSummed = CheckOutAppFunction.discounts();
+			#discountSummed = CheckOutAppFunction.discounts();
 			print(f"\t\t\t\t\tDiscount: {discountSummed}");
 			vated = (vated / 100) * num;
 			print(f"\t\t\t\t\tVAT @ 17.50%: {vated}");
@@ -91,23 +92,23 @@ while True:
 
 		case '3':
 			itemList = CheckOutAppFunction.addMore();
-
-			for index, value in itemList:
-				print(f"\t {value} ");
+			print(f"\t {itemList} ");
 			print();
+
 			sumed = CheckOutAppFunction.addMoreTotal();
-			for sum in sumed:
-				print("\t\t\t\t\tSub Total: {sum}");
+			num = sum(sumed)
+			print(f"\t\t\t\t\tSub Total: {num}");
 	
-			discountSummed = CheckOutAppFunction.discounts();
+			#discountSummed = CheckOutAppFunction.discounts();
 			print(f"\t\t\t\t\tDiscount: {discountSummed}");
 			print(f"\t\t\t\t\tVAT @ 17.50%: {vated}");
 			print("=================================================================================================");
 			print(f"\t\t\t\t\tBill Total: {billSum}");
+
 			print(f"\t\t\t\t\tAmount Paid {payment}");
 			balance = billSum - payment;
-			balance = Math.abs(balance);
-			print("\t\t\t\t\tBalance: {balance}");
+			balance = abs(balance);
+			print(f"\t\t\t\t\tBalance: {balance}");
 			print("=================================================================================================");
 			print("THANKS YOU FOR YOUR PATRONAGE");
 			print("=================================================================================================");
@@ -117,9 +118,9 @@ while True:
 
 
 		case '0':
-			hold = false;
+			False;
 			print("GoodBye");
-
+			break
 		case '_':
 			print("Invalid input");
 
