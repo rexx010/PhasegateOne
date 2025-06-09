@@ -50,7 +50,7 @@ while True:
 				print("Add more items?");
 				decision = input();
 
-				if decison == 'no':
+				if decision == 'no':
 					break
 
 			print("What is your name?");
@@ -64,14 +64,11 @@ while True:
 
 		case '2':
 			itemList = CheckOutAppFunction.addMore();
-
-			for index, value in itemList:
-				print(f"\t {value} ");
+			print(f"\t {itemList} ");
 			print();
 			
 			sumed = CheckOutAppFunction.addMoreTotal();
-			for sum in sumed:
-				print(f"\t\t\t\t\tSub Total: {sum}");
+			print(f"\t\t\t\t\tSub Total: {sumed}");
 
 			discountSummed = CheckOutAppFunction.discounts();
 			print(f"\t\t\t\t\tDiscount: discountSummed");
