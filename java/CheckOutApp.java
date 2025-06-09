@@ -10,6 +10,10 @@ Scanner input = new Scanner(System.in);
 //ArrayList<String> names = new ArrayList<>();
 ArrayList<ArrayList<String>> productList = new ArrayList<>();
 //ArrayList<Integer> price = new ArrayList<>();
+double vated = 17.50;
+double billSum = 0;
+double payment = 0;
+double balance = 0;
 
 String message = """
 WELCOME TO SEMICOLON STORE:
@@ -66,6 +70,7 @@ Enter each product detials in the user's cart...
 
 	System.out.println("How much discount will he/she get?");
 	int discount = input.nextInt();
+	CheckOutAppFunction.discountCalculation(discount);
 
 	ArrayList<String> names = CheckOutAppFunction.named(customerName, cashierName);
 
@@ -81,6 +86,43 @@ case 2:
 	System.out.println(itemList);
 	double [] sumed = CheckOutAppFunction.addMoreTotal();
 	System.out.println(Arrays.toString(sumed));
+	double discountSummed = CheckOutAppFunction.discounts();
+	System.out.println("Discount: "+discountSummed);
+	vated = (vated / 100) * sumed[0];
+	System.out.println("VAT @ 17.50%: "+vated);
+	System.out.println("=================================================================================================");
+	billSum = billSum + sumed[0];
+	System.out.println("Bill Total: "+billSum);
+	System.out.println("=================================================================================================");
+	System.out.println("THIS IS NOT AN RECEIPT KINDLY PAY "+billSum);
+	System.out.println("=================================================================================================");
+	System.out.println();
+	System.out.println();
+	System.out.println();
+	System.out.println("How much did the customer give you?");
+	payment = input.nextDouble();
+	break;
+
+case 3:
+	itemList = CheckOutAppFunction.addMore();
+	System.out.println(itemList);
+	sumed = CheckOutAppFunction.addMoreTotal();
+	System.out.println(Arrays.toString(sumed));
+	discountSummed = CheckOutAppFunction.discounts();
+	System.out.println("Discount: "+discountSummed);
+	System.out.println("VAT @ 17.50%: "+vated);
+	System.out.println("=================================================================================================");
+	billSum = billSum + sumed[0];
+	System.out.println("Bill Total: "+billSum);
+	System.out.println("Amount Paid "+payment);
+	balance = billSum - payment;
+	System.out.println("Balance "+balance);
+	System.out.println("=================================================================================================");
+	System.out.println("THANKS YOU FOR YOUR PATRONAGE");
+	System.out.println("=================================================================================================");
+	System.out.println();
+	System.out.println();
+	System.out.println();
 	break;
 
 case 0:

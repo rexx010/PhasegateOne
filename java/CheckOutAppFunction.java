@@ -6,6 +6,10 @@ public class CheckOutAppFunction{
 static ArrayList<ArrayList<String>> productList = new ArrayList<>();
 static ArrayList<String> namesused = new ArrayList<>();
 static double[] itemTotal = new double[1];
+static double discountSum = 0;
+static double vatSum = 0;
+static double vatAmount = 17.50;
+static double totalBill = 0;
 
 public static ArrayList<String> named(String customerName,  String cashierName){
 ArrayList<String> nameuser = new ArrayList<>();
@@ -47,7 +51,22 @@ addTo[0] = addTo[0] + sum;
 return addTo;
 }
 
+public static double discountCalculation(double discount){
+discountSum = (double)discount / 100;
+discountSum = discountSum * itemTotal[0];
+return discountSum;
+}
 
+public static double vatCalculation(){
+vatSum = vatAmount / 100;
+vatSum = vatSum * itemTotal[0];
+return vatSum;
+}
+
+public static double billCalculation(){
+totalBill = totalBill + itemTotal[0];
+return totalBill;
+}
 
 public static ArrayList<ArrayList<String>> addMore(){
 
@@ -56,6 +75,7 @@ System.out.println("Cashier: "+namesused.get(1));
 System.out.println("Customer Name: "+namesused.get(0));
 System.out.println("=======================================================================================================");
 System.out.println("\t\t\tITEM\tQUANTITY\tPRICE\tTOTAL(NGN)");
+System.out.println("--------------------------------------------------------------------------------------------------------");
 System.out.println();
 return productList;
 
@@ -63,10 +83,13 @@ return productList;
 }
 
 public static double[] addMoreTotal(){
-
+System.out.println("--------------------------------------------------------------------------------------------------------");
 return itemTotal;
 }
 
+public static double discounts(){
+return discountSum;
+}
 
 
 
