@@ -6,9 +6,9 @@ public static void main(String[] args){
 
 Scanner input = new Scanner(System.in);
 
-ArrayList<String> names = new ArrayList<>();
-ArrayList<String> productItem = new ArrayList<>();
-ArrayList<String> price = new ArrayList<>();
+//ArrayList<String> names = new ArrayList<>();
+ArrayList<String> productList = new ArrayList<>();
+//ArrayList<String> price = new ArrayList<>();
 
 String message = """
 WELCOME TO SEMICOLON STORE:
@@ -41,7 +41,7 @@ Enter each product detials in the user's cart...
 
 	do{
 	System.out.println("What did the user buy?");
-	System.out.println("rice\nbeans\ngarri\ntomato");
+	//System.out.println("rice\nbeans\ngarri\ntomato");
 	product = input.next();
 
 	System.out.println("How many pieces?");
@@ -49,6 +49,8 @@ Enter each product detials in the user's cart...
 
 	System.out.println("How much per unit?");
 	prices = input.nextInt();
+
+	productList = CheckOutAppFunction.productBox(product, pieces, prices);
 
 	System.out.println("Add more items?");
 	decision = input.next();
@@ -60,11 +62,14 @@ Enter each product detials in the user's cart...
 
 	System.out.println("How much discount will he/she get?");
 	int discount = input.nextInt();
+
 	ArrayList<String> names = CheckOutAppFunction.named(customerName, cashierName);
-	ArrayList<String> productList = CheckOutAppFunction.productBox(product, pieces, price);
+
 
 	System.out.println(names);
 	System.out.println(productList);
+
+	ArrayList<String> itemList = CheckOutAppFunction.list(productList);
 	break;
 
 case 0:

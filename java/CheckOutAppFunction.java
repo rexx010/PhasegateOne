@@ -10,16 +10,26 @@ nameuser.add(cashierName);
 return nameuser;
 }
 
+
 public static ArrayList<String> productBox(String item, int pieces, int price){
-ArrayList<String> productList = new ArrayList<>();
-product.add(item);
-product.add(Integer.toString(pieces));
-product.add(Integer.toString(price));
+ArrayList<String> products = new ArrayList<>();
+products.add(item);
+products.add(Integer.toString(pieces));
+products.add(Integer.toString(price));
 int total = pieces * price;
-product.add(Integer.toString(total));
+products.add(Integer.toString(total));
+
+return products;
+}
 
 
-/*public static int calculations(String item, int pieces, int price, int discount){
+public static ArrayList<String> list(ArrayList<String> one){
+ArrayList<String> productList = new ArrayList<>();
+productList.add(one);
+return productList;
+}
+
+/*public static ArrayList<String> addMore(ArrayList<String> productList, String item, int pieces, int price){
 
 
 
@@ -30,7 +40,7 @@ product.add(Integer.toString(total));
 
 
 
-}
+
 
 
 
