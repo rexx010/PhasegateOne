@@ -75,10 +75,6 @@ Enter each product detials in the user's cart...
 	ArrayList<String> names = CheckOutAppFunction.named(customerName, cashierName);
 
 
-	System.out.println(names);
-	System.out.println(productList);
-
-
 	break;
 
 case 2:
