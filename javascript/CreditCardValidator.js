@@ -32,7 +32,7 @@ console.log();
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
-			secondDigits += mod + div;
+			secondDigits += Math.floor(mod + div);
 		}else{
 			secondDigits += checker;
 		}
@@ -42,7 +42,6 @@ console.log();
 		oddPlace += atm[counter];
 	}
 	let total = secondDigits + oddPlace;
-
 	if(total % 10 == 0){
 		let GodSaveMe = " "; 
 		for(let number = 0; number < atm.length; number++){
@@ -51,7 +50,8 @@ console.log();
 	console.log("Credit Card Number: "+GodSaveMe);
 	console.log("Credit Card Digits: "+num1);
 	console.log("Credit Card Validity Status: Valid");
-
+console.log();
+console.log();
 	}else{
 		let GodSaveMe = " "; 
 		for(let number = 0; number < atm.length; number++){
@@ -77,7 +77,7 @@ console.log("Credit Card Type: Master card");
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
-			secondDigits += mod + div;
+			secondDigits += Math.floor(mod + div);
 		}else{
 			secondDigits += checker;
 		}
@@ -96,7 +96,8 @@ console.log("Credit Card Type: Master card");
 	console.log("Credit Card Number: "+GodSaveMe);
 	console.log("Credit Card Digits: "+num1);
 	console.log("Credit Card Validity Status: Valid");
-
+console.log();
+console.log();
 	}else{
 		let GodSaveMe = " "; 
 		for(let number = 0; number < atm.length; number++){
@@ -123,7 +124,7 @@ console.log("Credit Card Type: Discover card");
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
-			secondDigits += mod + div;
+			secondDigits += Math.floor(mod + div);
 		}else{
 			secondDigits += checker;
 		}
@@ -142,7 +143,8 @@ console.log("Credit Card Type: Discover card");
 	console.log("Credit Card Number: "+GodSaveMe);
 	console.log("Credit Card Digits: "+num1);
 	console.log("Credit Card Validity Status: Valid");
-
+console.log();
+console.log();
 	}else{
 		let GodSaveMe = " "; 
 		for(let number = 0; number < atm.length; number++){
@@ -169,7 +171,7 @@ console.log("Credit Card Type: American Express card");
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
-			secondDigits += mod + div;
+			secondDigits += Math.floor(mod + div);
 		}else{
 			secondDigits += checker;
 		}
@@ -188,7 +190,8 @@ console.log("Credit Card Type: American Express card");
 	console.log("Credit Card Number: "+GodSaveMe);
 	console.log("Credit Card Digits: "+num1);
 	console.log("Credit Card Validity Status: Valid");
-
+console.log();
+console.log();
 	}else{
 		let GodSaveMe = " "; 
 		for(let number = 0; number < atm.length; number++){
@@ -238,7 +241,7 @@ let atm = [];
 
 console.log("Validate your Credit Card");
 for(let counter = 0; counter < num1; counter++){
-let num = prompt("Enter the digits on your credit card accordingly "+(counter + 1)+": ");
+let num = Number(prompt("Enter the digits on your credit card accordingly "+(counter + 1)+": "));
 if(num < 0 || num > 9){
 console.log("Invalid length of number or invalid input");
 break;
