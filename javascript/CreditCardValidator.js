@@ -1,32 +1,34 @@
-import java.util.Arrays;
-public class CreditCardValidatorFunction{
+const input = require("prompt-sync");
+const prompt = input();
 
-public static void validate(int num1, int[] atm){
+
+const validate = function(atm){
 
 
 if(atm[0] < 3 || atm[0] > 6){
-System.out.println();
-System.out.println("Credit Card Type: Invalid Card");
-System.out.print("Credit Card Number: ");
-for(int number = 0; number < atm.length; number++){
-System.out.print(atm[number]);
+console.log();
+console.log("Credit Card Type: Invalid Card");
+
+let GodSaveMe = " ";
+for(let number = 0; number < atm.length; number++){
+GodSaveMe += atm[number];
 }
-System.out.println();
-System.out.println("Credit Card Digit Length: "+atm.length);
-System.out.println("Credit Card Validity: Invalid");
-System.out.println();
-System.out.println();
+console.log("Credit Card Number: "+GodSaveMe);
+console.log("Credit Card Digit Length: "+atm.length);
+console.log("Credit Card Validity: Invalid");
+console.log();
+console.log();
 
 }else if(atm[0] == 4){
-	System.out.println("Credit Card Type: Visa card");
+	console.log("Credit Card Type: Visa card");
 
-	int secondDigits = 0;
-	int oddPlace = 0;
+	let secondDigits = 0;
+	let oddPlace = 0;
 
-	for(int count = 0; count < atm.length; count += 2){
-		int checker = atm[count] * 2;
-		int mod = 0;
-		int div = 0;
+	for(let count = 0; count < atm.length; count += 2){
+		let checker = atm[count] * 2;
+		let mod = 0;
+		let div = 0;
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
@@ -36,42 +38,42 @@ System.out.println();
 		}
 	}
 
-	for(int counter = 1; counter < atm.length; counter += 2){
+	for(let counter = 1; counter < atm.length; counter += 2){
 		oddPlace += atm[counter];
 	}
-	int total = secondDigits + oddPlace;
+	let total = secondDigits + oddPlace;
 
 	if(total % 10 == 0){
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Valid");
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Valid");
 
 	}else{
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Invalid");
-System.out.println();
-System.out.println();
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Invalid");
+console.log();
+console.log();
 	}
 
 }else if(atm[0] == 5){
-System.out.println("Credit Card Type: Master card");
+console.log("Credit Card Type: Master card");
 
-	int secondDigits = 0;
-	int oddPlace = 0;
+	let secondDigits = 0;
+	let oddPlace = 0;
 
-	for(int count = 0; count < atm.length; count += 2){
-		int checker = atm[count] * 2;
-		int mod = 0;
-		int div = 0;
+	for(let count = 0; count < atm.length; count += 2){
+		let checker = atm[count] * 2;
+		let mod = 0;
+		let div = 0;
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
@@ -81,43 +83,43 @@ System.out.println("Credit Card Type: Master card");
 		}
 	}
 
-	for(int counter = 1; counter < atm.length; counter += 2){
+	for(let counter = 1; counter < atm.length; counter += 2){
 		oddPlace += atm[counter];
 	}
-	int total = secondDigits + oddPlace;
+	let total = secondDigits + oddPlace;
 
 	if(total % 10 == 0){
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Valid");
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Valid");
 
 	}else{
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Invalid");
-System.out.println();
-System.out.println();
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Invalid");
+console.log();
+console.log();
 	}
 
 
 }else if(atm[0] == 6){
-System.out.println("Credit Card Type: Discover card");
+console.log("Credit Card Type: Discover card");
 
-	int secondDigits = 0;
-	int oddPlace = 0;
+	let secondDigits = 0;
+	let oddPlace = 0;
 
-	for(int count = 0; count < atm.length; count += 2){
-		int checker = atm[count] * 2;
-		int mod = 0;
-		int div = 0;
+	for(let count = 0; count < atm.length; count += 2){
+		let checker = atm[count] * 2;
+		let mod = 0;
+		let div = 0;
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
@@ -127,43 +129,43 @@ System.out.println("Credit Card Type: Discover card");
 		}
 	}
 
-	for(int counter = 1; counter < atm.length; counter += 2){
+	for(let counter = 1; counter < atm.length; counter += 2){
 		oddPlace += atm[counter];
 	}
-	int total = secondDigits + oddPlace;
+	let total = secondDigits + oddPlace;
 
 	if(total % 10 == 0){
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Valid");
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Valid");
 
 	}else{
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Invalid");
-System.out.println();
-System.out.println();
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Invalid");
+console.log();
+console.log();
 	}
 
 
 }else if(atm[0] == 3 && atm[1] == 7){
-System.out.println("Credit Card Type: American Express card");
+console.log("Credit Card Type: American Express card");
 
-	int secondDigits = 0;
-	int oddPlace = 0;
+	let secondDigits = 0;
+	let oddPlace = 0;
 
-	for(int count = 0; count < atm.length; count += 2){
-		int checker = atm[count] * 2;
-		int mod = 0;
-		int div = 0;
+	for(let count = 0; count < atm.length; count += 2){
+		let checker = atm[count] * 2;
+		let mod = 0;
+		let div = 0;
 		if(checker > 9){
 			mod = checker % 10;
 			div = checker / 10;
@@ -173,30 +175,30 @@ System.out.println("Credit Card Type: American Express card");
 		}
 	}
 
-	for(int counter = 1; counter < atm.length; counter += 2){
+	for(let counter = 1; counter < atm.length; counter += 2){
 		oddPlace += atm[counter];
 	}
-	int total = secondDigits + oddPlace;
+	let total = secondDigits + oddPlace;
 
 	if(total % 10 == 0){
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Valid");
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Valid");
 
 	}else{
-		System.out.print("Credit Card Number: ");
-		for(int number = 0; number < atm.length; number++){
-		System.out.print(atm[number]);
+		let GodSaveMe = " "; 
+		for(let number = 0; number < atm.length; number++){
+		GodSaveMe += atm[number];
 		}
-	System.out.println();
-	System.out.println("Credit Card Digits: "+num1);
-	System.out.println("Credit Card Validity Status: Invalid");
-System.out.println();
-System.out.println();
+	console.log("Credit Card Number: "+GodSaveMe);
+	console.log("Credit Card Digits: "+num1);
+	console.log("Credit Card Validity Status: Invalid");
+console.log();
+console.log();
 	}
 
 
@@ -206,7 +208,6 @@ System.out.println();
 }
 
 
-}
 
 
 
@@ -224,33 +225,31 @@ System.out.println();
 
 
 
-import java.util.Scanner;
 
 
-public class CreditCardValidator{
-public static void main(String[] args){
-
-Scanner input = new Scanner(System.in);
-
-System.out.print("Enter the length of your digits: ");
-int num1 = input.nextInt();
+console.log("Enter the length of your card digits: ");
+let num1 = prompt();
 if(num1 < 13 || num1 > 16){
-System.out.print("Invalid length of number or invalid input");
+console.log("Invalid length of number or invalid input");
 }else{
 
-int[] atm = new int [num1];
 
-System.out.print("Enter each digit on your card: ");
-for(int counter = 0; counter < num1; counter++){
-atm[counter] = input.nextInt();
-}
-System.out.println();
-System.out.println();
+let atm = [];
 
-CreditCardValidatorFunction.validate(num1, atm);
+console.log("Validate your Credit Card");
+for(let counter = 0; counter < num1; counter++){
+let num = prompt("Enter the digits on your credit card accordingly "+(counter + 1)+": ");
+if(num < 0 || num > 9){
+console.log("Invalid length of number or invalid input");
+break;
+}else{
+atm.push(num)
 }
+}
+console.log();
+console.log();
 
-}
+validate(atm);
 
 }
 
