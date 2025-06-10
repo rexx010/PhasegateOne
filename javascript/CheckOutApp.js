@@ -1,7 +1,7 @@
+const input = require("prompt-sync");
+const prompt = input();
 
-
-const prompt = require("prompt-sync");
-const prompt = prompt();
+ 
 
 
 
@@ -13,47 +13,47 @@ let vatSum = 0;
 let vatAmount = 17.50;
 let totalBill = 0;
 
-const named = function (let customerName,  let cashierName){
+const named = function (customerName,  cashierName){
 nameuser = []
 namesused.push(customerName);
 namesused.push(cashierName);
 return namesused;
 }
 
-const addItem = function(let item, let pieces, let price ){
+const addItem = function(item, pieces, price ){
 productss = productBox(item, pieces, price);
 productList.push(productss);
 return productList;
 }
 
 
-const productBox = function(let item, let pieces, let price){
+const productBox = function(item, pieces, price){
 products = [];
 products.push(item);
-products.push(leteger.tolet(pieces));
-products.push(let.tolet(price));
+products.push(pieces);
+products.push(price);
 
 let total = pieces * price;
 
-products.push(let.tolet(total));
+products.push(total);
 
 return products;
 }
 
-const calculation = function(let pieces, let price ){
+const calculation = function(pieces, price ){
 let added = total(pieces, price);
 itemTotal[0] = itemTotal[0] + added[0];
 return itemTotal;
 }
 
-const total = function(let pieces, let price ){
+const total = function(pieces, price ){
 let addTo = [];
 let sum = pieces * price;
 addTo[0] = addTo[0] + sum;
 return addTo;
 }
 
-const discountCalculation = function(let discount){
+const discountCalculation = function(discount){
 discountSum = discount / 100;
 discountSum = discountSum * itemTotal[0];
 return discountSum;
@@ -73,8 +73,8 @@ return totalBill;
 const addMore = function(){
 
 console.log("SEMICOLON STORES \nMAIN BRANCH\nLOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS.\nTEL: 03293828343\nDATE: 18-DEC-22 8:48:11 pm");
-console.log("Cashier: "+namesused.get(1));
-console.log("Customer Name: "+namesused.get(0));
+console.log("Cashier: "+namesused[1]);
+console.log("Customer Name: "+namesused[0]);
 console.log("=======================================================================================================");
 console.log("\t\t\tITEM\tQUANTITY\tPRICE\tTOTAL(NGN)");
 console.log("--------------------------------------------------------------------------------------------------------");
@@ -100,13 +100,6 @@ return discountSum;
 
 
 
-
-
-
-
-
-
-
 productList = []
 
 let vated = 17.50;
@@ -122,10 +115,8 @@ console.log(message);
 let userChoice = prompt();
 console.log();
 switch(userChoice){
-case 1:
-	let output = """
-Enter each product detials in the user's cart...
-================================================""";
+case '1':
+	let output = "Enter each product detials in the user's cart...\n================================================";
 	console.log(output);
 	console.log();
 	
@@ -154,7 +145,7 @@ Enter each product detials in the user's cart...
 	console.log("Add more items?");
 	decision = prompt();
 
-	}while(decision.equals("yes"));
+	}while(decision === "yes");
 
 	console.log("What is your name?");
 	let cashierName = prompt();
@@ -165,9 +156,9 @@ Enter each product detials in the user's cart...
 
 	break;
 
-case 2:
+case '2':
 	itemList = addMore();
-	console.log("\t"+"  "+item+"  ");
+	console.log("\t"+"  "+itemList+"  ");
 	console.log();
 
 	let sumed = addMoreTotal();
@@ -191,9 +182,9 @@ case 2:
 	payment = Number(prompt());
 	break;
 
-case 3:
+case '3':
 	itemList = addMore();
-	console.log("\t"+"  "+item+"  ");
+	console.log("\t"+"  "+itemList+"  ");
 	console.log();
 
 	sumed = addMoreTotal();
@@ -216,7 +207,7 @@ case 3:
 	console.log();
 	break;
 
-case 0:
+case '0':
 	hold = false;
 	console.log("GoodBye");
 	break;
@@ -228,6 +219,10 @@ default:
 
 
 }
-}
 
-}
+
+
+
+
+
+
