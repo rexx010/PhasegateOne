@@ -14,7 +14,6 @@ let vatAmount = 17.50;
 let totalBill = 0;
 
 const named = function (customerName,  cashierName){
-nameuser = []
 namesused.push(customerName);
 namesused.push(cashierName);
 return namesused;
@@ -41,17 +40,17 @@ return products;
 }
 
 const calculation = function(pieces, price ){
-let added = total(pieces, price);
-itemTotal[0] = itemTotal[0] + added[0];
+let num = pieces * price;
+itemTotal.push(num);
 return itemTotal;
 }
 
-const total = function(pieces, price ){
+/*const total = function(pieces, price ){
 let addTo = [];
 let sum = pieces * price;
 addTo[0] = addTo[0] + sum;
 return addTo;
-}
+}*/
 
 const discountCalculation = function(discount){
 discountSum = discount / 100;
@@ -73,8 +72,8 @@ return totalBill;
 const addMore = function(){
 
 console.log("SEMICOLON STORES \nMAIN BRANCH\nLOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS.\nTEL: 03293828343\nDATE: 18-DEC-22 8:48:11 pm");
-console.log("Cashier: "+namesused[1]);
-console.log("Customer Name: "+namesused[0]);
+console.log("Cashier: " + namesused[1]);
+console.log("Customer Name: " + namesused[0]);
 console.log("=======================================================================================================");
 console.log("\t\t\tITEM\tQUANTITY\tPRICE\tTOTAL(NGN)");
 console.log("--------------------------------------------------------------------------------------------------------");
@@ -153,6 +152,7 @@ case '1':
 	console.log("How much discount will he/she get?");
 	let discount = prompt();
 	discountCalculation(discount);
+	named(customerName, cashierName);
 
 	break;
 
