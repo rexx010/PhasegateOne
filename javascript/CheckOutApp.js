@@ -54,7 +54,11 @@ return addTo;
 
 const discountCalculation = function(discount){
 discountSum = discount / 100;
-discountSum = discountSum * itemTotal[0];
+let sum = 0;
+for(let count = 0; count < itemTotal.length; count++){
+sum += itemTotal[count];
+}
+discountSum = discountSum * sum;
 return discountSum;
 }
 
@@ -162,14 +166,18 @@ case '2':
 	console.log();
 
 	let sumed = addMoreTotal();
-	console.log("\t\t\t\t\tSub Total: "+sumed);
+	let total = 0;
+	for(let count = 0; count < sumed.length; count++){
+	total += sumed[count];
+	}
+	console.log("\t\t\t\t\tSub Total: "+total);
 	
 	let discountSummed = discounts();
 	console.log("\t\t\t\t\tDiscount: "+discountSummed);
-	vated = (vated / 100) * sumed;
+	vated = (vated / 100) * total;
 	console.log("\t\t\t\t\tVAT @ 17.50%: "+vated);
 	console.log("=================================================================================================");
-	billSum = billSum + sumed[0];
+	billSum = billSum + total;
 	billSum = billSum - discountSummed + vated;
 	console.log("\t\t\t\t\tBill Total: "+billSum);
 	console.log("=================================================================================================");
@@ -187,11 +195,15 @@ case '3':
 	console.log("\t"+"  "+itemList+"  ");
 	console.log();
 
-	sumed = addMoreTotal();
-	console.log("\t\t\t\t\tSub Total: "+sumed);
+	let addition = addMoreTotal();
+	let total2 = 0;
+	for(let count = 0; count < addition.length; count++){
+	total2 += addition[count];
+	}
+	console.log("\t\t\t\t\tSub Total: "+total2);
 
-	discountSummed = discounts();
-	console.log("\t\t\t\t\tDiscount: "+discountSummed);
+	let discountSummed1 = discounts();
+	console.log("\t\t\t\t\tDiscount: "+discountSummed1);
 	console.log("\t\t\t\t\tVAT @ 17.50%: "+vated);
 	console.log("=================================================================================================");
 	console.log("\t\t\t\t\tBill Total: "+billSum);
