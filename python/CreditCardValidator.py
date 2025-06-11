@@ -19,10 +19,10 @@ else:
 
 			atm.append(num);
 
-	print();
-	print();
+			print();
+			print();
 
-validate(atm);
+			CreditCardValidatorFunction.validate(atm);
 
 
 
