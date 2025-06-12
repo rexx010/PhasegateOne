@@ -16,6 +16,7 @@ static int BF = 0;
 static String[] judgingVsperceptive = new String[5];
 static int AJ = 0;
 static int BP = 0;
+static String result = "";
 
 
 public static String[] extrovertORintrovert(String choosed, int number){
@@ -118,11 +119,39 @@ public static void judgingORperceptiveAnswer(){
 for(int counter = 0; counter < judgingVsperceptive.length; counter++){
 System.out.println(judgingVsperceptive[counter]);
 }
-System.out.println("Numbers of A selected: "+AT);
-System.out.println("Numbers of B selected: "+BF);
+System.out.println("Numbers of A selected: "+AJ);
+System.out.println("Numbers of B selected: "+BP);
 System.out.println();
 }
 
+public static String overallResult(){
+if(AE > BI){
+result += "E";
+}else{
+result += "I";
+}
+
+if(AS > BN){
+result += "S";
+}else{
+result += "N";
+}
+
+if(AT > BF){
+result += "T";
+}else{
+result += "F";
+}
+
+if(AJ > BP){
+result += "J";
+}else{
+result += "P";
+}
+return result;
+}
+
+//public static void overallResultType(){
 
 
 }
