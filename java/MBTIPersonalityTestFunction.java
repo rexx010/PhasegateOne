@@ -88,8 +88,9 @@ public static void extrovertORintrovertAnswer(){
 for(int counter = 0; counter < extrovertVsintrovert.length; counter++){
 System.out.println(extrovertVsintrovert[counter]);
 }
-System.out.println(AE);
-System.out.println(BI);
+System.out.println("Numbers of A selected: "+AE);
+System.out.println("Numbers of B selected: "+BI);
+System.out.println();
 }
 
 
@@ -97,8 +98,9 @@ public static void sensingORintuitiveAnswer(){
 for(int counter = 0; counter < sensingVsintuitive.length; counter++){
 System.out.println(sensingVsintuitive[counter]);
 }
-System.out.println(AS);
-System.out.println(BN);
+System.out.println("Numbers of A selected: "+AS);
+System.out.println("Numbers of B selected: "+BN);
+System.out.println();
 }
 
 
@@ -106,8 +108,9 @@ public static void thinkingORfeelingAnswer(){
 for(int counter = 0; counter < thinkingVsfeeling.length; counter++){
 System.out.println(thinkingVsfeeling[counter]);
 }
-System.out.println(AT);
-System.out.println(BF);
+System.out.println("Numbers of A selected: "+AT);
+System.out.println("Numbers of B selected: "+BF);
+System.out.println();
 }
 
 
@@ -115,8 +118,9 @@ public static void judgingORperceptiveAnswer(){
 for(int counter = 0; counter < judgingVsperceptive.length; counter++){
 System.out.println(judgingVsperceptive[counter]);
 }
-System.out.println(AT);
-System.out.println(BF);
+System.out.println("Numbers of A selected: "+AT);
+System.out.println("Numbers of B selected: "+BF);
+System.out.println();
 }
 
 

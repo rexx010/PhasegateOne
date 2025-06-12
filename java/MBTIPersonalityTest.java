@@ -33,7 +33,7 @@ String[][] questionsToAsk = {
 
 System.out.println("What is your name?");
 String userName = input.nextLine();
-
+System.out.println();
 
 for(int count = 0; count < questionsToAsk.length; count++){
 
@@ -131,7 +131,9 @@ MBTIPersonalityTestFunction.judgingORperceptiveCounter(userAnswer);
 
 
 }
-
+System.out.println();
+System.out.println();
+System.out.println("Hello "+userName+" you selected:");
 MBTIPersonalityTestFunction.extrovertORintrovertAnswer();
 MBTIPersonalityTestFunction.sensingORintuitiveAnswer();
 MBTIPersonalityTestFunction.thinkingORfeelingAnswer();
