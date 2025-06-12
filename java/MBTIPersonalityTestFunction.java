@@ -84,7 +84,7 @@ if(answer.equals("A")) AJ++;
 if(answer.equals("B")) BP++;
 }
 
-public static String[] extrovertORintrovertAnswer(){
+public static void extrovertORintrovertAnswer(){
 for(int counter = 0; counter < extrovertVsintrovert.length; counter++){
 System.out.println(extrovertVsintrovert[counter]);
 }
@@ -93,7 +93,7 @@ System.out.println(BI);
 }
 
 
-public static String[] sensingORintuitiveAnswer(){
+public static void sensingORintuitiveAnswer(){
 for(int counter = 0; counter < sensingVsintuitive.length; counter++){
 System.out.println(sensingVsintuitive[counter]);
 }
@@ -102,7 +102,7 @@ System.out.println(BN);
 }
 
 
-public static String[] thinkingORfeelingAnswer(){
+public static void thinkingORfeelingAnswer(){
 for(int counter = 0; counter < thinkingVsfeeling.length; counter++){
 System.out.println(thinkingVsfeeling[counter]);
 }
@@ -111,9 +111,9 @@ System.out.println(BF);
 }
 
 
-public static String[] judgingORperceptiveAnswer(){
-for(int counter = 0; counter < printjudgingVsperceptive.length; counter++){
-System.out.println(printjudgingVsperceptive[counter]);
+public static void judgingORperceptiveAnswer(){
+for(int counter = 0; counter < judgingVsperceptive.length; counter++){
+System.out.println(judgingVsperceptive[counter]);
 }
 System.out.println(AT);
 System.out.println(BF);
