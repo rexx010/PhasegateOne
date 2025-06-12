@@ -34,7 +34,7 @@ String[][] questionsToAsk = {
 System.out.println("What is your name?");
 String userName = input.nextLine();
 
-//for(int counter = 0; counter < questionsToAsk.length-1; counter++){
+
 for(int count = 0; count < questionsToAsk.length; count++){
 
 if(count == 0 || count == 4 || count == 8 || count == 12 || count == 16){
@@ -131,6 +131,11 @@ MBTIPersonalityTestFunction.judgingORperceptiveCounter(userAnswer);
 
 
 }
+
+MBTIPersonalityTestFunction.extrovertORintrovertAnswer();
+MBTIPersonalityTestFunction.sensingORintuitiveAnswer();
+MBTIPersonalityTestFunction.thinkingORfeelingAnswer();
+MBTIPersonalityTestFunction.judgingORperceptiveAnswer();
 
 
 
