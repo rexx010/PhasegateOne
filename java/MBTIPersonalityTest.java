@@ -34,18 +34,103 @@ String[][] questionsToAsk = {
 System.out.println("What is your name?");
 String userName = input.nextLine();
 
-//for(int counter = 0; counter < questionsToAsk.length; counter++){
+//for(int counter = 0; counter < questionsToAsk.length-1; counter++){
 for(int count = 0; count < questionsToAsk.length; count++){
-System.out.println(count+1 +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 
+if(count == 0 || count == 4 || count == 8 || count == 12 || count == 16){
+System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+String userAnswer = "";
+
+while(!userAnswer.equals("A") || !userAnswer.equals("B")){
+userAnswer = input.next();
+userAnswer = userAnswer.toUpperCase();
+if(userAnswer.equals("A") || userAnswer.equals("B")){
+break;
+}else{
+System.out.print("Invalid choice... Try again");
+}
+}
+
+if(userAnswer.equals("A")){
+MBTIPersonalityTestFunction.extrovertORintrovert(questionsToAsk[count][0], count+1);
+}else if(userAnswer.equals("B")){
+MBTIPersonalityTestFunction.extrovertORintrovert(questionsToAsk[count][1], count+1);
+}
+MBTIPersonalityTestFunction.extrovertORintrovertCounter(userAnswer);
+}
+
+
+if(count == 1 || count == 5 || count == 9 || count == 13 || count == 17){
+System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+String userAnswer = "";
+
+while(!userAnswer.equals("A") || !userAnswer.equals("B")){
+userAnswer = input.next();
+userAnswer = userAnswer.toUpperCase();
+if(userAnswer.equals("A") || userAnswer.equals("B")){
+break;
+}else{
+System.out.print("Invalid choice... Try again");
+}
+}
+
+if(userAnswer.equals("A")){
+MBTIPersonalityTestFunction.sensingORintuitive(questionsToAsk[count][0], count+1);
+}else if(userAnswer.equals("B")){
+MBTIPersonalityTestFunction.sensingORintuitive(questionsToAsk[count][1], count+1);
+}
+MBTIPersonalityTestFunction.sensingORintuitiveCounter(userAnswer);
+}
+
+
+if(count == 2 || count == 6 || count == 10 || count == 14 || count == 18){
+System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+String userAnswer = "";
+
+while(!userAnswer.equals("A") || !userAnswer.equals("B")){
+userAnswer = input.next();
+userAnswer = userAnswer.toUpperCase();
+if(userAnswer.equals("A") || userAnswer.equals("B")){
+break;
+}else{
+System.out.print("Invalid choice... Try again");
+}
+}
+
+if(userAnswer.equals("A")){
+MBTIPersonalityTestFunction.thinkingORfeeling(questionsToAsk[count][0], count+1);
+}else if(userAnswer.equals("B")){
+MBTIPersonalityTestFunction.thinkingORfeeling(questionsToAsk[count][1], count+1);
+}
+MBTIPersonalityTestFunction.thinkingORfeelingCounter(userAnswer);
 }
 
 
 
+if(count == 3 || count == 7 || count == 11 || count == 15 || count == 19){
+System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+String userAnswer = "";
+
+while(!userAnswer.equals("A") || !userAnswer.equals("B")){
+userAnswer = input.next();
+userAnswer = userAnswer.toUpperCase();
+if(userAnswer.equals("A") || userAnswer.equals("B")){
+break;
+}else{
+System.out.print("Invalid choice... Try again");
+}
+}
+
+if(userAnswer.equals("A")){
+MBTIPersonalityTestFunction.judgingORperceptive(questionsToAsk[count][0], count+1);
+}else if(userAnswer.equals("B")){
+MBTIPersonalityTestFunction.judgingORperceptive(questionsToAsk[count][1], count+1);
+}
+MBTIPersonalityTestFunction.judgingORperceptiveCounter(userAnswer);
+}
 
 
-
-
+}
 
 
 
