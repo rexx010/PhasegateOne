@@ -32,7 +32,7 @@ def extrovertORintrovert(choosed, number):
 
 def extrovertORintrovertCounter(answer):
 	if(answer == "A"):
-		AE+1;
+		AE + 1;
 	if(answer == "B"):
 		BI+1;
 
