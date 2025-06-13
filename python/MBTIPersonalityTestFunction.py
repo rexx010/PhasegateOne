@@ -16,25 +16,25 @@ result = "";
 
 def extrovertORintrovert(choosed, number):
 	if(number == 1):
-		extrovertVsintrovert[0] = choosed;
+		extrovertVsintrovert.append(choosed);
 	if(number == 5):
-		extrovertVsintrovert[1] = choosed;
+		extrovertVsintrovert.append(choosed);
 	if(number == 9):
-		extrovertVsintrovert[2] = choosed;
+		extrovertVsintrovert.append(choosed);
 	if(number == 13):
-		extrovertVsintrovert[3] = choosed;
+		extrovertVsintrovert.append(choosed);
 	if(number == 17):
-		extrovertVsintrovert[4] = choosed;
+		extrovertVsintrovert.append(choosed);
 
 	return extrovertVsintrovert;
 
 
 
 def extrovertORintrovertCounter(answer):
-	if(answer === "A"):
-		AE++;
-	if(answer === "B"):
-		BI++;
+	if(answer == "A"):
+		AE+1;
+	if(answer == "B"):
+		BI+1;
 
 
 def sensingORintuitive(choosed, number):
@@ -54,10 +54,10 @@ def sensingORintuitive(choosed, number):
 
 
 def sensingORintuitiveCounter(answer):
-	if(answer === "A"):
-		AS++;
-	if(answer === "B"):
-		BN++;
+	if(answer == "A"):
+		AS+1;
+	if(answer == "B"):
+		BN+1;
 
 
 
@@ -78,10 +78,10 @@ def thinkingORfeeling(choosed, number):
 
 
 def thinkingORfeelingCounter(answer):
-	if(answer === "A"):
-		AT++;
-	if(answer === "B"):
-		BF++;
+	if(answer == "A"):
+		AT+1;
+	if(answer == "B"):
+		BF+1;
 
 
 
@@ -102,52 +102,53 @@ def judgingORperceptive(choosed, number):
 
 
 def judgingORperceptiveCounter(answer):
-	if(answer === "A"):
-		AJ++;
-	if(answer === "B"):
-		BP++;
+	if(answer == "A"):
+		AJ+1;
+	if(answer == "B"):
+		BP+1;
 
 
 def extrovertORletrovertAnswer():
 	for counter in extrovertVsintrovert:
-		print(extrovertVsintrovert[counter]);
+		print(counter);
 
-	print("Numbers of A selected: "+AE);
-	print("Numbers of B selected: "+BI);
+	print(f"Numbers of A selected: {AE}");
+	print(f"Numbers of B selected: {BI}");
 	print();
 
 
 
 def sensingORintuitiveAnswer():
 	for counter in sensingVsintuitive:
-		print(sensingVsintuitive[counter]);
+		print(counter);
 
-	print("Numbers of A selected: "+AS);
-	print("Numbers of B selected: "+BN);
+	print(f"Numbers of A selected: {AS}");
+	print(f"Numbers of B selected: {BN}");
 	print();
 
 
 
 def thinkingORfeelingAnswer():
 	for counter in thinkingVsfeeling:
-		print(thinkingVsfeeling[counter]);
+		print(counter);
 
-	print("Numbers of A selected: "+AT);
-	print("Numbers of B selected: "+BF);
+	print(f"Numbers of A selected: {AT}");
+	print(f"Numbers of B selected: {BF}");
 	print();
 
 
 
 def judgingORperceptiveAnswer():
 	for counter in judgingVsperceptive:
-		print(judgingVsperceptive[counter]);
+		print(counter);
 
-	print("Numbers of A selected: "+AJ);
-	print("Numbers of B selected: "+BP);
+	print(f"Numbers of A selected: {AJ}");
+	print(f"Numbers of B selected: {BP}");
 	print();
 
 
 def overallResult():
+	result = "";
 	if(AE > BI):
 		result += "E";
 	else:
@@ -174,5 +175,5 @@ def overallResult():
 	return result;
 
 
-//public static void overallResultType(){
+#public static void overallResultType(){
 

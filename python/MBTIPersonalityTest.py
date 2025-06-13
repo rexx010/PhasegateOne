@@ -29,36 +29,36 @@ print();
 
 for count in range(0, len(questionsToAsk)):
 
-	if(count == 0 || count == 4 || count == 8 || count == 12 || count == 16):
+	if(count == 0 or count == 4 or count == 8 or count == 12 or count == 16):
 		print(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 		userAnswer = "";
 
-		while(userAnswer != "A" || userAnswer != "B"):
+		while(userAnswer != "A" or userAnswer != "B"):
 			userAnswer = input();
-			userAnswer = userAnswer.toUpperCase();
-			if(userAnswer == "A" || userAnswer == "B"):
+			userAnswer = userAnswer.upper();
+			if(userAnswer == "A" or userAnswer == "B"):
 				break;
 			else:
 				print("Invalid choice... Try again");
 
 
-			if(userAnswer == "A"):
-				MBTIPersonalityTestFunction.extrovertORintrovert(questionsToAsk[count][0], count+1);
-			elif(userAnswer == "B"):
-				MBTIPersonalityTestFunction.extrovertORintrovert(questionsToAsk[count][1], count+1);
+		if(userAnswer == "A"):
+			MBTIPersonalityTestFunction.extrovertORintrovert(questionsToAsk[count][0], count+1);
+		elif(userAnswer == "B"):
+			MBTIPersonalityTestFunction.extrovertORintrovert(questionsToAsk[count][1], count+1);
 
-			MBTIPersonalityTestFunction.extrovertORintrovertCounter(userAnswer);
+		MBTIPersonalityTestFunction.extrovertORintrovertCounter(userAnswer);
 
 
 
-	if(count == 1 || count == 5 || count == 9 || count == 13 || count == 17):
+	if(count == 1 or count == 5 or count == 9 or count == 13 or count == 17):
 		print(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 		userAnswer = "";
 
-		while(userAnswer != "A" || userAnswer != "B"):
+		while(userAnswer != "A" or userAnswer != "B"):
 			userAnswer = input();
-			userAnswer = userAnswer.toUpperCase();
-			if(userAnswer == "A" || userAnswer == "B"):
+			userAnswer = userAnswer.upper();
+			if(userAnswer == "A" or userAnswer == "B"):
 				break;
 			else:
 				print("Invalid choice... Try again");
@@ -73,14 +73,14 @@ for count in range(0, len(questionsToAsk)):
 
 
 
-	if(count == 2 || count == 6 || count == 10 || count == 14 || count == 18):
+	if(count == 2 or count == 6 or count == 10 or count == 14 or count == 18):
 		print(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 		userAnswer = "";
 
-		while(userAnswer != "A" || userAnswer != "B"):
+		while(userAnswer != "A" or userAnswer != "B"):
 			userAnswer = input();
-			userAnswer = userAnswer.toUpperCase();
-			if(userAnswer == "A" || userAnswer == "B"):
+			userAnswer = userAnswer.upper();
+			if(userAnswer == "A" or userAnswer == "B"):
 				break;
 			else:
 				print("Invalid choice... Try again");
@@ -96,14 +96,14 @@ for count in range(0, len(questionsToAsk)):
 
 
 
-	if(count == 3 || count == 7 || count == 11 || count == 15 || count == 19):
+	if(count == 3 or count == 7 or count == 11 or count == 15 or count == 19):
 		print(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 		userAnswer = "";
 
-		while(userAnswer != "A" || !userAnswer != "B"):
+		while(userAnswer != "A" or userAnswer != "B"):
 			userAnswer = input();
-			userAnswer = userAnswer.toUpperCase();
-			if(userAnswer == "A" || userAnswer == "B"):
+			userAnswer = userAnswer.upper();
+			if(userAnswer == "A" or userAnswer == "B"):
 				break;
 			else:
 				print("Invalid choice... Try again");
