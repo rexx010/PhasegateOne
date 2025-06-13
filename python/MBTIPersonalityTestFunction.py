@@ -31,82 +31,91 @@ def extrovertORintrovert(choosed, number):
 
 
 def extrovertORintrovertCounter(answer):
+	global AE
+	global BI
 	if(answer == "A"):
-		AE + 1;
+		AE = AE + 1;
 	if(answer == "B"):
-		BI+1;
-
+		BI = BI + 1;
+	return AE, BI;
 
 def sensingORintuitive(choosed, number):
 	if(number == 2):
-		sensingVsintuitive[0] = choosed;
+		sensingVsintuitive.append(choosed);
 	if(number == 6):
-		sensingVsintuitive[1] = choosed;
+		sensingVsintuitive.append(choosed);
 	if(number == 10):
-		sensingVsintuitive[2] = choosed;
+		sensingVsintuitive.append(choosed);
 	if(number == 14):
-		sensingVsintuitive[3] = choosed;
+		sensingVsintuitive.append(choosed);
 	if(number == 18):
-		sensingVsintuitive[4] = choosed;
+		sensingVsintuitive.append(choosed);
 
 	return sensingVsintuitive;
 
 
 
 def sensingORintuitiveCounter(answer):
+	global AS
+	global BN
 	if(answer == "A"):
-		AS+1;
+		AS = AS + 1;
 	if(answer == "B"):
-		BN+1;
+		BN = BN + 1;
+	return AS, BN;
 
 
 
 def thinkingORfeeling(choosed, number):
 	if(number == 3):
-		thinkingVsfeeling[0] = choosed;
+		thinkingVsfeeling.append(choosed);
 	if(number == 7):
-		thinkingVsfeeling[1] = choosed;
+		thinkingVsfeeling.append(choosed);
 	if(number == 11):
-		thinkingVsfeeling[2] = choosed;
+		thinkingVsfeeling.append(choosed);
 	if(number == 15):
-		thinkingVsfeeling[3] = choosed;
+		thinkingVsfeeling.append(choosed);
 	if(number == 19):
-		thinkingVsfeeling[4] = choosed;
+		thinkingVsfeeling.append(choosed);
 
 	return thinkingVsfeeling;
 
 
 
 def thinkingORfeelingCounter(answer):
+	global AT
+	global BF
 	if(answer == "A"):
-		AT+1;
+		AT = AT + 1;
 	if(answer == "B"):
-		BF+1;
-
+		BF = BF + 1;
+	return AT, BF;
 
 
 def judgingORperceptive(choosed, number):
 	if(number == 4):
-		judgingVsperceptive[0] = choosed;
+		judgingVsperceptive.append(choosed);
 	if(number == 8):
-		judgingVsperceptive[1] = choosed;
+		judgingVsperceptive.append(choosed);
 	if(number == 12):
-		judgingVsperceptive[2] = choosed;
+		judgingVsperceptive.append(choosed);
 	if(number == 16):
-		judgingVsperceptive[3] = choosed;
+		judgingVsperceptive.append(choosed);
 	if(number == 20):
-		judgingVsperceptive[4] = choosed;
+		judgingVsperceptive.append(choosed);
 
 	return judgingVsperceptive;
 
 
 
 def judgingORperceptiveCounter(answer):
+	global AJ
+	global BP
 	if(answer == "A"):
-		AJ+1;
+		AJ = AJ + 1;
 	if(answer == "B"):
-		BP+1;
-
+		BP = BP + 1;
+	return AJ, BP;
 
 def extrovertORletrovertAnswer():
 	for counter in extrovertVsintrovert:
