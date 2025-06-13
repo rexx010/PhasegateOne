@@ -1,8 +1,8 @@
 
-let extrovertVsletrovert = [];
+let extrovertVsintrovert = [];
 let AE = 0;
 let BI = 0;
-let sensingVsletuitive = [];
+let sensingVsintuitive = [];
 let AS = 0;
 let BN = 0;
 let thinkingVsfeeling = [];
@@ -14,34 +14,34 @@ let BP = 0;
 let result = "";
 
 
-const extrovertORletrovert = function (choosed, number){
-if(number == 1) extrovertVsletrovert[0] = choosed;
-if(number == 5) extrovertVsletrovert[1] = choosed;
-if(number == 9) extrovertVsletrovert[2] = choosed;
-if(number == 13) extrovertVsletrovert[3] = choosed;
-if(number == 17) extrovertVsletrovert[4] = choosed;
+const extrovertORintrovert = function (choosed, number){
+if(number == 1) extrovertVsintrovert[0] = choosed;
+if(number == 5) extrovertVsintrovert[1] = choosed;
+if(number == 9) extrovertVsintrovert[2] = choosed;
+if(number == 13) extrovertVsintrovert[3] = choosed;
+if(number == 17) extrovertVsintrovert[4] = choosed;
 
-return extrovertVsletrovert;
+return extrovertVsintrovert;
 }
 
 
-const extrovertORletrovertCounter = function (answer){
+const extrovertORintrovertCounter = function (answer){
 if(answer === "A") AE++;
 if(answer === "B") BI++;
 }
 
-const sensingORletuitive = function (choosed, number){
-if(number == 2) sensingVsletuitive[0] = choosed;
-if(number == 6) sensingVsletuitive[1] = choosed;
-if(number == 10) sensingVsletuitive[2] = choosed;
-if(number == 14) sensingVsletuitive[3] = choosed;
-if(number == 18) sensingVsletuitive[4] = choosed;
+const sensingORintuitive = function (choosed, number){
+if(number == 2) sensingVsintuitive[0] = choosed;
+if(number == 6) sensingVsintuitive[1] = choosed;
+if(number == 10) sensingVsintuitive[2] = choosed;
+if(number == 14) sensingVsintuitive[3] = choosed;
+if(number == 18) sensingVsintuitive[4] = choosed;
 
-return sensingVsletuitive;
+return sensingVsintuitive;
 }
 
 
-const sensingORletuitiveCounter = function(answer){
+const sensingORintuitiveCounter = function(answer){
 if(answer === "A") AS++;
 if(answer === "B") BN++;
 }
@@ -81,42 +81,42 @@ if(answer === "B") BP++;
 }
 
 const extrovertORletrovertAnswer = function (){
-for(let counter = 0; counter < extrovertVsletrovert.length; counter++){
-console.logln(extrovertVsletrovert[counter]);
+for(let counter = 0; counter < extrovertVsintrovert.length; counter++){
+console.log(extrovertVsintrovert[counter]);
 }
-console.logln("Numbers of A selected: "+AE);
-console.logln("Numbers of B selected: "+BI);
-console.logln();
+console.log("Numbers of A selected: "+AE);
+console.log("Numbers of B selected: "+BI);
+console.log();
 }
 
 
-const sensingORletuitiveAnswer = function (){
-for(let counter = 0; counter < sensingVsletuitive.length; counter++){
-console.logln(sensingVsletuitive[counter]);
+const sensingORintuitiveAnswer = function (){
+for(let counter = 0; counter < sensingVsintuitive.length; counter++){
+console.log(sensingVsintuitive[counter]);
 }
-console.logln("Numbers of A selected: "+AS);
-console.logln("Numbers of B selected: "+BN);
-console.logln();
+console.log("Numbers of A selected: "+AS);
+console.log("Numbers of B selected: "+BN);
+console.log();
 }
 
 
 const thinkingORfeelingAnswer = function (){
 for(let counter = 0; counter < thinkingVsfeeling.length; counter++){
-console.logln(thinkingVsfeeling[counter]);
+console.log(thinkingVsfeeling[counter]);
 }
-console.logln("Numbers of A selected: "+AT);
-console.logln("Numbers of B selected: "+BF);
-console.logln();
+console.log("Numbers of A selected: "+AT);
+console.log("Numbers of B selected: "+BF);
+console.log();
 }
 
 
 const judgingORperceptiveAnswer = function(){
 for(let counter = 0; counter < judgingVsperceptive.length; counter++){
-console.logln(judgingVsperceptive[counter]);
+console.log(judgingVsperceptive[counter]);
 }
-console.logln("Numbers of A selected: "+AJ);
-console.logln("Numbers of B selected: "+BP);
-console.logln();
+console.log("Numbers of A selected: "+AJ);
+console.log("Numbers of B selected: "+BP);
+console.log();
 }
 
 const overallResult = function (){
@@ -171,18 +171,18 @@ const prompt = input();
 
 let questionsToAsk = [
 ["A. expend energy, enjoy groups", "B. conserve energy, enjoy one-on-one"],
-["A. leterpret literally", "B. look for meaning and possibilities"],
+["A. interpret literally", "B. look for meaning and possibilities"],
 ["A. logical, thinking, questioning", "B. empathetic, feeling, accommodating"],
 ["A. organized, orderly", "B. flexible, adaptable"],
 ["A. more outgoing, think out loud", "B. more reserved, think to yourself"],
 ["A. practical, realistic, experiential", "B. imaginative, innovative, theoretical"],
 ["A. candid, straigth forward, frank", "B. tactful, kind, encouraging"],
 ["A. plan, schedule", "B. unplanned, sponteneous"],
-["A. seek many task, public activities, leteracting with others", "B. seek private, solitary activities with quiet to concentrate"],
+["A. seek many task, public activities, interacting with others", "B. seek private, solitary activities with quiet to concentrate"],
 ["A. standard, usual, conventional", "B. different, novel, unique"],
 ["A. firm, tend to criticize, hold the line", "B. gentle, tend to appreciate, conciliate"],
 ["A. regulated, structured", "B. easy-going, live and let live"],
-["A. external, communicative, express yourself", "B. leternal, reticent, keep to yourself"],
+["A. external, communicative, express yourself", "B. internal, reticent, keep to yourself"],
 ["A. focus on here-and-now", "B. look to the future, global perspective, big picture"],
 ["A. tough-minded, just", "B. tender-hearted, merciful"],
 ["A. preparation, plan ahead", "B. go with the flow, adapt as you go"],
@@ -213,11 +213,11 @@ console.log("Invalid choice... Try again");
 }
 
 if(userAnswer === "A"){
-extrovertORletrovert(questionsToAsk[count][0], count+1);
+extrovertORintrovert(questionsToAsk[count][0], count+1);
 }else if(userAnswer === "B"){
-extrovertORletrovert(questionsToAsk[count][1], count+1);
+extrovertORintrovert(questionsToAsk[count][1], count+1);
 }
-extrovertORletrovertCounter(userAnswer);
+extrovertORintrovertCounter(userAnswer);
 }
 
 
@@ -236,11 +236,11 @@ console.log("Invalid choice... Try again");
 }
 
 if(userAnswer === "A"){
-sensingORletuitive(questionsToAsk[count][0], count+1);
+sensingORintuitive(questionsToAsk[count][0], count+1);
 }else if(userAnswer === "B"){
-sensingORletuitive(questionsToAsk[count][1], count+1);
+sensingORintuitive(questionsToAsk[count][1], count+1);
 }
-sensingORletuitiveCounter(userAnswer);
+sensingORintuitiveCounter(userAnswer);
 }
 
 
@@ -298,18 +298,18 @@ console.log();
 console.log();
 console.log("Hello "+userName+" you selected:");
 extrovertORletrovertAnswer();
-sensingORletuitiveAnswer();
+sensingORintuitiveAnswer();
 thinkingORfeelingAnswer();
 judgingORperceptiveAnswer();
 console.log();
 
 result = overallResult();
 console.log();
-if(result === "letJ"){
-console.log(result+" \n\nletJ (Architect) is a personality type with the letroverted, letuitive, Thinking, and Judging traits. These thoughtful tacticians love perfecting the details of life, applying creativity and rationality to everything they do. Their inner world is often a private, complex one.");
+if(result === "INTJ"){
+console.log(result+" \n\nINTJ (Architect) is a personality type with the letroverted, letuitive, Thinking, and Judging traits. These thoughtful tacticians love perfecting the details of life, applying creativity and rationality to everything they do. Their inner world is often a private, complex one.");
 }
-else if(result === "letP"){
-console.log(result+" \n\nletP (Logician) is a personality type with the letroverted, letuitive, Thinking, and Prospecting traits. These flexible thinkers enjoy taking an unconventional approach to many aspects of life. They often seek out unlikely paths, mixing willingness to experiment with personal creativity.");
+else if(result === "INTP"){
+console.log(result+" \n\nINTP (Logician) is a personality type with the letroverted, letuitive, Thinking, and Prospecting traits. These flexible thinkers enjoy taking an unconventional approach to many aspects of life. They often seek out unlikely paths, mixing willingness to experiment with personal creativity.");
 }
 else if(result === "ENTJ"){
 console.log(result+" \n\n\nENTJ (Commander) is a personality type with the Extraverted, letuitive, Thinking, and Judging traits. They are decisive people who love momentum and accomplishment. They gather information to construct their creative visions but rarely hesitate for long before acting on them.");
