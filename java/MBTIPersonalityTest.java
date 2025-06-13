@@ -38,7 +38,7 @@ System.out.println();
 for(int count = 0; count < questionsToAsk.length; count++){
 
 if(count == 0 || count == 4 || count == 8 || count == 12 || count == 16){
-System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+System.out.println(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 String userAnswer = "";
 
 while(!userAnswer.equals("A") || !userAnswer.equals("B")){
@@ -61,7 +61,7 @@ MBTIPersonalityTestFunction.extrovertORintrovertCounter(userAnswer);
 
 
 if(count == 1 || count == 5 || count == 9 || count == 13 || count == 17){
-System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+System.out.println(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 String userAnswer = "";
 
 while(!userAnswer.equals("A") || !userAnswer.equals("B")){
@@ -84,7 +84,7 @@ MBTIPersonalityTestFunction.sensingORintuitiveCounter(userAnswer);
 
 
 if(count == 2 || count == 6 || count == 10 || count == 14 || count == 18){
-System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+System.out.println(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 String userAnswer = "";
 
 while(!userAnswer.equals("A") || !userAnswer.equals("B")){
@@ -108,7 +108,7 @@ MBTIPersonalityTestFunction.thinkingORfeelingCounter(userAnswer);
 
 
 if(count == 3 || count == 7 || count == 11 || count == 15 || count == 19){
-System.out.println(count +" "+ questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
+System.out.println(questionsToAsk[count][0] +" "+ questionsToAsk[count][1]);
 String userAnswer = "";
 
 while(!userAnswer.equals("A") || !userAnswer.equals("B")){
