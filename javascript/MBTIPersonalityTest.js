@@ -1,10 +1,175 @@
+
+let extrovertVsintrovert = [];
+let int AE = 0;
+let int BI = 0;
+let sensingVsintuitive = [];
+let int AS = 0;
+let int BN = 0;
+let thinkingVsfeeling = [];
+let int AT = 0;
+let int BF = 0;
+let judgingVsperceptive = [];
+let int AJ = 0;
+let int BP = 0;
+let result = "";
+
+
+const extrovertORintrovert = function (choosed, number){
+if(number == 1) extrovertVsintrovert[0] = choosed;
+if(number == 5) extrovertVsintrovert[1] = choosed;
+if(number == 9) extrovertVsintrovert[2] = choosed;
+if(number == 13) extrovertVsintrovert[3] = choosed;
+if(number == 17) extrovertVsintrovert[4] = choosed;
+
+return extrovertVsintrovert;
+}
+
+
+const extrovertORintrovertCounter = function (answer){
+if(answer === "A") AE++;
+if(answer === "B") BI++;
+}
+
+const sensingORintuitive = function (choosed, number){
+if(number == 2) sensingVsintuitive[0] = choosed;
+if(number == 6) sensingVsintuitive[1] = choosed;
+if(number == 10) sensingVsintuitive[2] = choosed;
+if(number == 14) sensingVsintuitive[3] = choosed;
+if(number == 18) sensingVsintuitive[4] = choosed;
+
+return sensingVsintuitive;
+}
+
+
+const sensingORintuitiveCounter = function(answer){
+if(answer === "A") AS++;
+if(answer === "B") BN++;
+}
+
+
+const thinkingORfeeling = function (choosed, number){
+if(number == 3) thinkingVsfeeling[0] = choosed;
+if(number == 7) thinkingVsfeeling[1] = choosed;
+if(number == 11) thinkingVsfeeling[2] = choosed;
+if(number == 15) thinkingVsfeeling[3] = choosed;
+if(number == 19) thinkingVsfeeling[4] = choosed;
+
+return thinkingVsfeeling;
+}
+
+
+const thinkingORfeelingCounter = function (answer){
+if(answer === "A") AT++;
+if(answer === "B") BF++;
+}
+
+
+const judgingORperceptive = function (choosed, number){
+if(number == 4) judgingVsperceptive[0] = choosed;
+if(number == 8) judgingVsperceptive[1] = choosed;
+if(number == 12) judgingVsperceptive[2] = choosed;
+if(number == 16) judgingVsperceptive[3] = choosed;
+if(number == 20) judgingVsperceptive[4] = choosed;
+
+return judgingVsperceptive;
+}
+
+
+const judgingORperceptiveCounter = function (answer){
+if(answer === "A") AJ++;
+if(answer === "B") BP++;
+}
+
+const extrovertORintrovertAnswer = function (){
+for(int counter = 0; counter < extrovertVsintrovert.length; counter++){
+System.out.println(extrovertVsintrovert[counter]);
+}
+System.out.println("Numbers of A selected: "+AE);
+System.out.println("Numbers of B selected: "+BI);
+System.out.println();
+}
+
+
+const sensingORintuitiveAnswer = function (){
+for(int counter = 0; counter < sensingVsintuitive.length; counter++){
+System.out.println(sensingVsintuitive[counter]);
+}
+System.out.println("Numbers of A selected: "+AS);
+System.out.println("Numbers of B selected: "+BN);
+System.out.println();
+}
+
+
+const thinkingORfeelingAnswer = function (){
+for(int counter = 0; counter < thinkingVsfeeling.length; counter++){
+System.out.println(thinkingVsfeeling[counter]);
+}
+System.out.println("Numbers of A selected: "+AT);
+System.out.println("Numbers of B selected: "+BF);
+System.out.println();
+}
+
+
+const judgingORperceptiveAnswer = function(){
+for(int counter = 0; counter < judgingVsperceptive.length; counter++){
+System.out.println(judgingVsperceptive[counter]);
+}
+System.out.println("Numbers of A selected: "+AJ);
+System.out.println("Numbers of B selected: "+BP);
+System.out.println();
+}
+
+const overallResult = function (){
+if(AE > BI){
+result += "E";
+}else{
+result += "I";
+}
+
+if(AS > BN){
+result += "S";
+}else{
+result += "N";
+}
+
+if(AT > BF){
+result += "T";
+}else{
+result += "F";
+}
+
+if(AJ > BP){
+result += "J";
+}else{
+result += "P";
+}
+return result;
+}
+
+//public static void overallResultType(){
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const input = require("prompt-sync");
 const prompt = input();
 
 
-
-
-questionsToAsk = [
+let questionsToAsk = [
 ["A. expend energy, enjoy groups", "B. conserve energy, enjoy one-on-one"],
 ["A. interpret literally", "B. look for meaning and possibilities"],
 ["A. logical, thinking, questioning", "B. empathetic, feeling, accommodating"],
