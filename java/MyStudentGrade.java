@@ -32,7 +32,7 @@ System.out.println("Invalid input... Try again");
 }
 }
 MyStudentGradeFunction.subjects(subjectNumber);
-MyStudentGradeFunction.table(studentNumber, subjectNumber);
+MyStudentGradeFunction.gradeTable(studentNumber, subjectNumber);
 
 
 System.out.println("saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
@@ -63,14 +63,14 @@ System.out.println();
 }
 }
 
-MyStudentGradeFunction.table1(scoreTable);
-int [][] result = MyStudentGradeFunction.table2();
+MyStudentGradeFunction.gradeTableInitialized(scoreTable);
+
+int [][] result = MyStudentGradeFunction.gradeTableInitializedReturned();
 for(int count = 0; count < result.length; count++){
-for(int counter = 0; counter < result.length; counter++){
-System.out.print(Arrays.toString(result[counter]));
+System.out.println(Arrays.toString(result[count]));
 }
-System.out.println();
-}
+
+
 
 
 }
