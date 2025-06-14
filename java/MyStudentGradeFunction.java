@@ -31,10 +31,10 @@ return studentAndSubject;
 }
 
 
-public static String[] studentNameInit(){
-studentName = new String[student];
+/*public static String[] studentNameInit(){
+studentName = new String[studentAndSubject.length];
 return studentName;
-}
+}*/
 
 public static int[] totalTable(){
 total = new int[student];
@@ -47,6 +47,7 @@ return average;
 }
 
 public static String[] studentNameInitialized(){
+String[] studentName = new String[studentAndSubject.length];
 for(int count = 0; count < studentName.length; count++){
 String num = Integer.toString(count+1);
 studentName[count] = "student "+num;
