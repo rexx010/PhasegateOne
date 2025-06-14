@@ -44,7 +44,7 @@ return studentName;
 }
 
 public static int[] totalTable(int num){
-total = new int[student];
+total = new int[num];
 for(int count = 0; count < total.length; count++){
 total[count] = studentAndSubject[count][0] + studentAndSubject[count][1] + studentAndSubject[count][2];
 }
@@ -52,7 +52,7 @@ return total;
 }
 
 public static double[] averageTable(int num){
-average = new double[student];
+average = new double[num];
 for(int count = 0; count < average.length; count++){
 average[count] = total[count] / subject;
 }
@@ -134,7 +134,7 @@ if(subOne[count] < 50) fails++;
 counter++;
 
 }
-double average = totalSub / counter;
+double average = (double)totalSub / counter;
 
 System.out.println("Highest scoring student is : Student "+studentWithHighestScore +" scoring "+highestScore);
 System.out.println("Lowest scoring student is : Student "+studentWithLowestScore +" scoring "+lowestScore);
@@ -226,6 +226,101 @@ System.out.printf("average Score is: %.2f%n",average);
 System.out.println("Number of passes: "+passes);
 System.out.println("Number of fails: "+fails);
 }
+
+
+public static void conclusion(){
+
+int firstline = studentAndSubject.length;
+int secondline = studentAndSubject[0].length;
+
+int[] highestPasses = new int[secondline];
+int[] highestFails = new int[secondline];
+int subjectPasses = 0;
+int subjectfails = 0;
+
+for(int counter = 0; counter < secondline; counter++){
+
+for(int count = 0; count < firstline; count++){
+if(studentAndSubject[count][counter] > 49)subjectPasses++;
+if(studentAndSubject[count][counter ] < 50)subjectfails++;
+}
+for(int count = 0; count < highestPasses.length; count++){
+highestPasses[count] = subjectPasses;
+highestFails[count] = subjectfails;
+}
+}
+int easiest = 0;
+int counteasiest = 0;
+int hardest = 1000;
+int counthardest = 0;
+
+for(int imTired = 0; imTired < highestPasses.length; imTired++){
+if(highestPasses[imTired] > easiest){
+easiest = highestPasses[imTired];
+counteasiest = imTired;
+}
+
+if(highestFails[imTired] < hardest){
+hardest = highestFails[imTired];
+counthardest = imTired;
+}
+}
+
+System.out.println("The easiest subject is subject "+counteasiest+" with "+easiest+" passes");
+System.out.println("The hardest subject is subject "+counthardest+" with "+hardest+" hardest");
+int overall = 0;
+int postion = 0;
+int sub = 0;
+
+int overallLoser = 1000;
+int postionLoser = 0;
+int subLoser = 0;
+
+for(int countH = 0; countH < studentAndSubject.length; countH++){
+for(int countHI = 0; countHI < studentAndSubject[countH].length; countHI++){
+if(studentAndSubject[countH][countHI] > overall){
+overall = studentAndSubject[countH][countHI];
+postion = countH+1;
+sub = countHI+1;
+}
+
+if(studentAndSubject[countH][countHI] < overallLoser){
+overallLoser = studentAndSubject[countH][countHI];
+postionLoser = countH+1;
+subLoser = countHI+1;
+}
+
+}
+}
+System.out.println("The overall highest score is scored by student "+postion+" in subject "+sub+" scoring "+overall);
+System.out.println("The overall highest score is scored by student "+postionLoser+" in subject "+subLoser+" scoring "+overallLoser);
+
+System.out.println();
+System.out.println();
+System.out.println("CLASS SUMMARY");
+System.out.println("=====================================================================================");
+int best = 0;
+int bestpos = 0;
+int worst = 0;
+int worstpos = 0;
+for(int count = 0; count < total.length; count++){
+if(total[count] > best){
+best = total[count];
+bestpos = count;
+}
+if(total[count] > worst){
+worst = total[count];
+worstpos = count;
+}
+}
+System.out.println("Best Graduating Student is: Student "+bestpos+" scoring "+best);
+System.out.println("=====================================================================================");
+System.out.println();
+System.out.println();
+System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+System.out.println("Worst Graduating Student is: Student "+worstpos+" scoring "+worst);
+}
+
 
 
 }
