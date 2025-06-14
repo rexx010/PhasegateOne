@@ -301,16 +301,16 @@ System.out.println("CLASS SUMMARY");
 System.out.println("=====================================================================================");
 int best = 0;
 int bestpos = 0;
-int worst = 0;
+int worst = 1000;
 int worstpos = 0;
 for(int count = 0; count < total.length; count++){
 if(total[count] > best){
 best = total[count];
-bestpos = count;
+bestpos = count+1;
 }
-if(total[count] > worst){
+if(total[count] < worst){
 worst = total[count];
-worstpos = count;
+worstpos = count+1;
 }
 }
 System.out.println("Best Graduating Student is: Student "+bestpos+" scoring "+best);
@@ -319,6 +319,24 @@ System.out.println();
 System.out.println();
 System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 System.out.println("Worst Graduating Student is: Student "+worstpos+" scoring "+worst);
+System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+System.out.println();
+System.out.println();
+System.out.println("=====================================================================================");
+int classTotal = 0;
+double classAverage = 0.0;
+
+for(int counter = 0; counter < total.length; counter++){
+classTotal += total[counter]; 
+}
+classAverage = (double)classTotal / student;
+
+System.out.println("Class total score is: "+classTotal);
+System.out.println("Class average score is: "+classAverage);
+
+System.out.println("=====================================================================================");
+System.out.println();
+System.out.println();
 }
 
 
