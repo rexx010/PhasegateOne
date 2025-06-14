@@ -67,6 +67,9 @@ MyStudentGradeFunction.gradeTableInitialized(scoreTable);
 MyStudentGradeFunction.studentNameInit(studentNumber);
 MyStudentGradeFunction.totalTable(studentNumber);
 MyStudentGradeFunction.averageTable(studentNumber);
+MyStudentGradeFunction.subOneScores(studentNumber);
+MyStudentGradeFunction.subTwoScores(studentNumber);
+MyStudentGradeFunction.subThreeScores(studentNumber);
 
 
 System.out.println("====================================================================================");
@@ -79,9 +82,14 @@ int [] totalResult = MyStudentGradeFunction.total();
 double [] averageResult = MyStudentGradeFunction.average();
 
 
-for(int counter = 0; counter < studentNumber; counter++){
+for(int counter = 0; counter < subResult.length; counter++){
 
-System.out.print(nameResult[counter]+"\t\t");
+System.out.print(nameResult[counter]+"\t");
+
+for(int count = 0; count < subResult[counter].length; count++){
+//int subjectResult = subResult[counter][count];
+System.out.print(subResult[counter][count]+"\t");
+}
 
 int result = totalResult[counter];
 System.out.print(result+"\t");
@@ -95,9 +103,16 @@ System.out.println("============================================================
 System.out.println("====================================================================================");
 
 
+System.out.println();
+System.out.println();
+System.out.println("SUBJECT SUMMARY");
+System.out.println();
 
-
-
+MyStudentGradeFunction.subjectOne();
+System.out.println();
+MyStudentGradeFunction.subjectTwo();
+System.out.println();
+MyStudentGradeFunction.subjectThree();
 
 
 
