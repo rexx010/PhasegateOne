@@ -70,8 +70,36 @@ MyStudentGradeFunction.averageTable(studentNumber);
 
 
 System.out.println("====================================================================================");
-System.out.println("STUDENT\tSUB1\tSUB2\tTOT\tAVE\tPOS");
+System.out.println("STUDENT\t\tSUB1\tSUB2\tSUB3\tTOT\tAVE\tPOS");
 System.out.println("====================================================================================");
+
+String [] nameResult = MyStudentGradeFunction.studentName();
+int [][] subResult = MyStudentGradeFunction.gradeTableInitializedReturned();
+int [] totalResult = MyStudentGradeFunction.total();
+double [] averageResult = MyStudentGradeFunction.average();
+
+
+for(int counter = 0; counter < studentNumber; counter++){
+
+System.out.print(nameResult[counter]+"\t\t");
+
+int result = totalResult[counter];
+System.out.print(result+"\t");
+
+double resultave = averageResult[counter];
+System.out.printf("%.2f\t",resultave);
+
+System.out.println();
+}
+System.out.println("====================================================================================");
+System.out.println("====================================================================================");
+
+
+
+
+
+
+
 
 /*String [] nameResult = MyStudentGradeFunction.studentName();
 for(int count = 0; count < nameResult.length; count++){
