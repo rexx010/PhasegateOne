@@ -31,39 +31,24 @@ return studentAndSubject;
 }
 
 
-/*public static String[] studentNameInit(){
-studentName = new String[studentAndSubject.length];
-return studentName;
-}*/
-
-public static int[] totalTable(){
-total = new int[student];
-return total;
-}
-
-public static double[] averageTable(){
-average = new double[student];
-return average;
-}
-
-public static String[] studentNameInitialized(){
-String[] studentName = new String[studentAndSubject.length];
+public static String[] studentNameInit(int num){
+studentName = new String[num];
 for(int count = 0; count < studentName.length; count++){
-String num = Integer.toString(count+1);
-studentName[count] = "student "+num;
+studentName[count] = "student "+ (count+1);
 }
 return studentName;
 }
 
-
-public static int[] totalTableSum(){
+public static int[] totalTable(int num){
+total = new int[student];
 for(int count = 0; count < total.length; count++){
 total[count] = studentAndSubject[count][0] + studentAndSubject[count][1] + studentAndSubject[count][2];
 }
 return total;
 }
 
-public static double[] averageTableSum(){
+public static double[] averageTable(int num){
+average = new double[student];
 for(int count = 0; count < average.length; count++){
 average[count] = total[count] / subject;
 }
