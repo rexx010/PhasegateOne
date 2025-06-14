@@ -65,8 +65,25 @@ System.out.println();
 
 MyStudentGradeFunction.gradeTableInitialized(scoreTable);
 
-int [][] result = MyStudentGradeFunction.gradeTableInitializedReturned();
+int [][] subResult = MyStudentGradeFunction.gradeTableInitializedReturned();
 for(int count = 0; count < result.length; count++){
+System.out.println(Arrays.toString(result[count]));
+}
+
+
+String [] nameResult = MyStudentGradeFunction.studentName();
+for(int count = 0; count < nameResult.length; count++){
+System.out.println(Arrays.toString(result[count]));
+}
+
+int [] totalResult = MyStudentGradeFunction.total();
+for(int count = 0; count < totalResult.length; count++){
+System.out.println(Arrays.toString(result[count]));
+}
+
+
+double [] averageResult = MyStudentGradeFunction.average();
+for(int count = 0; count < averageResult.length; count++){
 System.out.println(Arrays.toString(result[count]));
 }
 
