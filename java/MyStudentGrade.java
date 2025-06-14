@@ -73,7 +73,7 @@ System.out.println("============================================================
 System.out.println("STUDENT\tSUB1\tSUB2\tTOT\tAVE\tPOS");
 System.out.println("====================================================================================");
 
-String [] nameResult = MyStudentGradeFunction.studentName();
+/*String [] nameResult = MyStudentGradeFunction.studentName();
 for(int count = 0; count < nameResult.length; count++){
 System.out.println(nameResult[count]);
 }
@@ -97,7 +97,7 @@ double [] averageResult = MyStudentGradeFunction.average();
 for(int count = 0; count < averageResult.length; count++){
 double result = averageResult[count];
 System.out.println(result);
-}
+}*/
 
 
 
