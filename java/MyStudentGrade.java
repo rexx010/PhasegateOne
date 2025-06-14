@@ -6,11 +6,34 @@ public static void main(String[] args){
 
 Scanner input = new Scanner(System.in);
 
+int studentNumber = 0;
+int subjectNumber = 0;
+
 System.out.println("How many Student do you have sir/ma?");
-int studentNumber = input.nextInt();
+while(true){
+studentNumber = input.nextInt();
+if(studentNumber > 0){
+break;
+}else{
+System.out.println("Invalid input... Try again");
+}
+}
+MyStudentGradeFunction.students(studentNumber);
+
+
 
 System.out.println("How many subject do they offer?");
-int subjectNumber = input.nextInt();
+while(true){
+subjectNumber = input.nextInt();
+if(subjectNumber > 0){
+break;
+}else{
+System.out.println("Invalid input... Try again");
+}
+}
+MyStudentGradeFunction.subjects(subjectNumber);
+MyStudentGradeFunction.table(studentNumber, subjectNumber);
+
 
 System.out.println("saving >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 System.out.println("Saved successfully");
@@ -40,8 +63,14 @@ System.out.println();
 }
 }
 
-
-
+MyStudentGradeFunction.table1(scoreTable);
+int [][] result = MyStudentGradeFunction.table2();
+for(int count = 0; count < result.length; count++){
+for(int counter = 0; counter < result.length; counter++){
+System.out.print(Arrays.toString(result[counter]));
+}
+System.out.println();
+}
 
 
 }
