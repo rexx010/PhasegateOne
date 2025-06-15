@@ -25,6 +25,63 @@ System.out.println();
 }
 }
 
+public static void removeContact(String name){
+for(int count = 0; count < phonebookList.size(); ){
+//ArrayList<String> checking = phonebookList.get(count);
+if(phonebookList.get(count).get(0).equalsIgnoreCase(name)){
+phonebookList.remove(count);
+}else{
+count++;
+}
+
+}
+}
+
+
+public static ArrayList<String> searchByPhone(String phone){
+ArrayList<String> checking = new ArrayList
+for(int count = 0; count < phonebookList.size(); count++){
+if(phonebookList.get(count).get(0).equals(phone)){
+ArrayList<String> checking = phonebookList(count);
+}
+}
+return checking;
+}
+
+
+public static void removeContact(String name){
+for(int count = 0; count < phonebookList.size(); ){
+//ArrayList<String> checking = phonebookList.get(count);
+if(phonebookList.get(count).get(0).equalsIgnoreCase(name)){
+phonebookList.remove(count);
+}else{
+count++;
+}
+
+}
+}
+
+
+public static void removeContact(String name){
+for(int count = 0; count < phonebookList.size(); ){
+//ArrayList<String> checking = phonebookList.get(count);
+if(phonebookList.get(count).get(0).equalsIgnoreCase(name)){
+phonebookList.remove(count);
+}else{
+count++;
+}
+
+}
+}
+
+
+
+
+
+
+
+
+
 
 
 
