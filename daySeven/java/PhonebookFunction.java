@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class PhonebookFunction{
 
+static Scanner input = new Scanner(System.in);
+
 static ArrayList<ArrayList<String>> phonebookList = new ArrayList<>();
 
 public static ArrayList<ArrayList<String>> addContact(String firstName, String lastName, String PhoneNumber){
@@ -39,38 +41,55 @@ count++;
 
 
 public static ArrayList<String> searchByPhone(String phone){
-ArrayList<String> checking = new ArrayList
+ArrayList<String> checking = new ArrayList<>();
 for(int count = 0; count < phonebookList.size(); count++){
-if(phonebookList.get(count).get(0).equals(phone)){
-ArrayList<String> checking = phonebookList(count);
+if(phonebookList.get(count).get(2).equals(phone)){
+checking = phonebookList.get(count);
 }
 }
 return checking;
 }
 
 
-public static void removeContact(String name){
-for(int count = 0; count < phonebookList.size(); ){
-//ArrayList<String> checking = phonebookList.get(count);
-if(phonebookList.get(count).get(0).equalsIgnoreCase(name)){
-phonebookList.remove(count);
-}else{
-count++;
+public static ArrayList<String> searchByfirstname(String firstname){
+ArrayList<String> checking = new ArrayList<>();
+for(int count = 0; count < phonebookList.size(); count++){
+if(phonebookList.get(count).get(0).equals(firstname)){
+checking = phonebookList.get(count);
 }
-
 }
+return checking;
 }
 
 
-public static void removeContact(String name){
-for(int count = 0; count < phonebookList.size(); ){
-//ArrayList<String> checking = phonebookList.get(count);
-if(phonebookList.get(count).get(0).equalsIgnoreCase(name)){
-phonebookList.remove(count);
-}else{
-count++;
+public static ArrayList<String> searchBysecondname(String secondName){
+ArrayList<String> checking = new ArrayList<>();
+for(int count = 0; count < phonebookList.size(); count++){
+if(phonebookList.get(count).get(1).equals(secondName)){
+checking = phonebookList.get(count);
+}
+}
+return checking;
 }
 
+
+public static void EditContact(String firstN){
+ArrayList<String> checking = new ArrayList<>();
+for(int count = 0; count < phonebookList.size(); count++){
+if(phonebookList.get(count).get(0).equals(firstN)){
+System.out.println("Enter new first name");
+String first = input.nextLine();
+System.out.println("Enter new second name");
+String second = input.nextLine();
+System.out.println("Enter new phone number");
+String phone = input.nextLine();
+
+checking.add(first);
+checking.add(second);
+checking.add(phone);
+
+phonebookList.set(count, checking);
+}
 }
 }
 
