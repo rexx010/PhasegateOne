@@ -50,27 +50,49 @@ case "3":
 	System.out.println("Search contact by name");
 	String contactName = input.nextLine();
 	PhonebookFunction.removeContact(contactName);
+	System.out.println("Contact deleted...");
 	System.out.println();
 	break;
 case "4":
 	System.out.println("Search contact by phoneNumber");
 	String contactPhone = input.nextLine();
-	PhonebookFunction.removeContact(contactName);
+	System.out.println();
+	ArrayList<String> checking = new ArrayList<>();
+	checking = PhonebookFunction.searchByPhone(contactPhone);
+	for(String details : checking){
+	System.out.print(details+" ");
+	}
 	System.out.println();
 	break;
 case "5":
 	System.out.println("Search contact by first name");
 	String contactFirstName = input.nextLine();
-	PhonebookFunction.removeContact(contactName);
+	System.out.println();
+	checking = new ArrayList<>();
+	checking = PhonebookFunction.searchByfirstname(contactFirstName);
+	for(String details : checking){
+	System.out.print(details+" ");
+	}
 	System.out.println();
 	break;
 case "6":
 	System.out.println("Search contact by first name");
 	String contactSecondName = input.nextLine();
-	PhonebookFunction.removeContact(contactName);
+	System.out.println();
+	checking = new ArrayList<>();
+	checking = PhonebookFunction.searchBysecondname(contactSecondName);
+	for(String details : checking){
+	System.out.print(details+" ");
+	}
 	System.out.println();
 	break;
 case "7":
+	System.out.println("Enter the contact's first name to edit the contact info");
+	String firstN = input.nextLine();
+	System.out.println();
+	PhonebookFunction.EditContact(firstN);
+	System.out.println("Contact edited");
+	System.out.println();
 	break;
 case "0":
 	myCondition = false;
