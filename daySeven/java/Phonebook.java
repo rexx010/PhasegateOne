@@ -47,12 +47,28 @@ case "2":
 	System.out.println();
 	break;
 case "3":
+	System.out.println("Search contact by name");
+	String contactName = input.nextLine();
+	PhonebookFunction.removeContact(contactName);
+	System.out.println();
 	break;
 case "4":
+	System.out.println("Search contact by phoneNumber");
+	String contactPhone = input.nextLine();
+	PhonebookFunction.removeContact(contactName);
+	System.out.println();
 	break;
 case "5":
+	System.out.println("Search contact by first name");
+	String contactFirstName = input.nextLine();
+	PhonebookFunction.removeContact(contactName);
+	System.out.println();
 	break;
 case "6":
+	System.out.println("Search contact by first name");
+	String contactSecondName = input.nextLine();
+	PhonebookFunction.removeContact(contactName);
+	System.out.println();
 	break;
 case "7":
 	break;
