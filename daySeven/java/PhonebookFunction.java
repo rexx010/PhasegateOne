@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class PhonebookFunction{
 
-static Scanner input = new Scanner(System.in);
+
 
 static ArrayList<ArrayList<String>> phonebookList = new ArrayList<>();
 
@@ -74,6 +74,7 @@ return checking;
 
 
 public static void EditContact(String firstN){
+static Scanner input = new Scanner(System.in);
 ArrayList<String> checking = new ArrayList<>();
 for(int count = 0; count < phonebookList.size(); count++){
 if(phonebookList.get(count).get(0).equals(firstN)){
