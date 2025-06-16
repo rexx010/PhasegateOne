@@ -1,12 +1,18 @@
 phonebookList = []
 
 def addContact(firstName, lastName, PhoneNumber):
-    contact = [];
-    contact.append(firstName);
-    contact.append(lastName);
-    contact.append(PhoneNumber);
-    phonebookList.append(contact);
-    return phonebookList;
+    if len(PhoneNumber) != 11 and PhoneNumber[0] != '0' and  PhoneNumber[2] != '0':
+        print("invalid length or invalid number... Try again");
+    elif PhoneNumber[1] != '7' and PhoneNumber[1] != '8' and PhoneNumber[1] != '9':
+        print("Error, second number should be 7, 8, or 9... Try again");
+    else:
+
+        contact = [];
+        contact.append(firstName);
+        contact.append(lastName);
+        contact.append(PhoneNumber);
+        phonebookList.append(contact);
+        return phonebookList;
 
 
 
@@ -23,9 +29,14 @@ def removeContact(name):
 
 
 def searchByPhone(phone):
-    for item in phonebookList:
-        if(item[2] == phone):
-            return item
+    if len(PhoneNumber) != 11 and PhoneNumber[0] != '0' and  PhoneNumber[2] != '0':
+        print("invalid length or invalid number... Try again");
+    elif PhoneNumber[1] != '7' and PhoneNumber[1] != '8' and PhoneNumber[1] != '9':
+        print("Error, second number should be 7, 8, or 9... Try again");
+    else:
+        for item in phonebookList:
+            if(item[2] == phone):
+                return item
 
 
 def searchByfirstname(firstname):
