@@ -7,12 +7,13 @@ public class PhonebookFunction{
 static Scanner input = new Scanner(System.in);
 
 static ArrayList<ArrayList<String>> phonebookList = new ArrayList<>();
+static ArrayList<String> checkingP = new ArrayList<>();
 
 public static ArrayList<ArrayList<String>> addContact(String firstName, String lastName, String PhoneNumber){
 if(PhoneNumber.length() != 11 && PhoneNumber.charAt(0) != '0' &&  PhoneNumber.charAt(2) != '0'){
 System.out.print("invalid length or invalid number... Try again");
 }else if(PhoneNumber.charAt(1) != '7' && PhoneNumber.charAt(1) != '8' && PhoneNumber.charAt(1) != '9'){
-System.out.print("Error... Try again");
+System.out.print("Error, second number should be 7, 8, or 9... Try again");
 }else{
 ArrayList<String> contact = new ArrayList<>();
 contact.add(firstName);
@@ -48,13 +49,18 @@ count++;
 
 
 public static ArrayList<String> searchByPhone(String phone){
-ArrayList<String> checking = new ArrayList<>();
+if(phone.length() != 11 && phone.charAt(0) != '0' &&  phone.charAt(2) != '0'){
+System.out.print("invalid length or invalid number... Try again");
+}else if(phone.charAt(1) != '7' && phone.charAt(1) != '8' && phone.charAt(1) != '9'){
+System.out.print("Error, second number should be 7, 8, or 9... Try again");
+}else{
 for(int count = 0; count < phonebookList.size(); count++){
 if(phonebookList.get(count).get(2).equals(phone)){
-checking = phonebookList.get(count);
+checkingP = phonebookList.get(count);
 }
 }
-return checking;
+}
+return checkingP;
 }
 
 

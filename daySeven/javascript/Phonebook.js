@@ -3,13 +3,19 @@ const prompt = input();
 
 
  phonebookList = []
-
+checking = [];
 const addContact = function(firstName, lastName, PhoneNumber){
+if(PhoneNumber.length !== 11 && PhoneNumber.charAt(0) !== '0' &&  PhoneNumber.charAt(2) !== '0'){
+console.log("invalid length or invalid number... Try again");
+}else if(PhoneNumber.charAt(1) !== '7' && PhoneNumber.charAt(1) !== '8' && PhoneNumber.charAt(1) !== '9'){
+console.log("Error, second number should be 7, 8, or 9... Try again");
+}else{
 contact = [];
 contact.push(firstName);
 contact.push(lastName);
 contact.push(PhoneNumber);
 phonebookList.push(contact);
+}
 return phonebookList;
 }
 
@@ -36,10 +42,15 @@ phonebookList.splice(count, 1);
 
 
 const searchByPhone = function(phone){
-checking = [];
+if(PhoneNumber.length !== 11 && PhoneNumber.charAt(0) !== '0' &&  PhoneNumber.charAt(2) !== '0'){
+console.log("invalid length or invalid number... Try again");
+}else if(PhoneNumber.charAt(1) !== '7' && PhoneNumber.charAt(1) !== '8' && PhoneNumber.charAt(1) !== '9'){
+console.log("Error, second number should be 7, 8, or 9... Try again");
+}else{
 for(let count = 0; count < phonebookList.length; count++){
 if(phonebookList[count][2] === phone){
 checking = phonebookList[count];
+}
 }
 }
 return checking;
