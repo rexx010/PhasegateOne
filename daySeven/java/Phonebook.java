@@ -35,12 +35,12 @@ case "1":
 	System.out.println("Enter the second name...");
 	String secondtName = input.nextLine();
 	System.out.println("Enter the phone number...");
-	String phoneNumber = input.nextLine();
+	int phoneNumber = input.nextInt();
+	String number = Integer.toString(phoneNumber);
 	System.out.println();
-	System.out.println("Contact saved...");
-	System.out.println(firstName+" "+secondtName+" : "+phoneNumber);
+	System.out.println(firstName+" "+secondtName+" : "+number);
 	System.out.println();
-	PhonebookFunction.addContact(firstName, secondtName, phoneNumber);
+	PhonebookFunction.addContact(firstName, secondtName, number);
 	break;
 case "2":
 	PhonebookFunction.viewContact();

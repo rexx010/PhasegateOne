@@ -17,7 +17,7 @@ return phonebookList;
 const viewContact = function(){
 for(let count = 0; count < phonebookList.length; count++){
 for(let counter = 0; counter < phonebookList[count].length; counter++){
-console.log(phonebookList[count][counter]+" ");
+console.log(phonebookList[count][counter]);
 }
 
 }

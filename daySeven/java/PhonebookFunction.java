@@ -4,16 +4,23 @@ import java.util.Arrays;
 
 public class PhonebookFunction{
 
-
+static Scanner input = new Scanner(System.in);
 
 static ArrayList<ArrayList<String>> phonebookList = new ArrayList<>();
 
 public static ArrayList<ArrayList<String>> addContact(String firstName, String lastName, String PhoneNumber){
+if(PhoneNumber.length() != 11 && PhoneNumber.charAt(0) != '0' &&  PhoneNumber.charAt(2) != '0'){
+System.out.print("invalid length or invalid number... Try again");
+}else if(PhoneNumber.charAt(1) != '7' && PhoneNumber.charAt(1) != '8' && PhoneNumber.charAt(1) != '9'){
+System.out.print("Error... Try again");
+}else{
 ArrayList<String> contact = new ArrayList<>();
 contact.add(firstName);
 contact.add(lastName);
 contact.add(PhoneNumber);
 phonebookList.add(contact);
+System.out.println("Contact saved...");
+}
 return phonebookList;
 }
 
@@ -74,7 +81,6 @@ return checking;
 
 
 public static void EditContact(String firstN){
-static Scanner input = new Scanner(System.in);
 ArrayList<String> checking = new ArrayList<>();
 for(int count = 0; count < phonebookList.size(); count++){
 if(phonebookList.get(count).get(0).equals(firstN)){
