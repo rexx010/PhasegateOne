@@ -243,7 +243,7 @@ console.log("Validate your Credit Card");
 for(let counter = 0; counter < num1; counter++){
 let num = Number(prompt("Enter the digits on your credit card accordingly "+(counter + 1)+": "));
 if(num < 0 || num > 9){
-console.log("Invalid length of number or invalid input");
+console.log("Invalid length of number or invalid input... digits should be between 0 - 9");
 break;
 }else{
 atm.push(num)

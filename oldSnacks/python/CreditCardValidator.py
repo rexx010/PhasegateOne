@@ -13,7 +13,7 @@ else:
 	for numbers in range(0, num1):
 		num = int(input(f"Enter the digits on your card accordingly {numbers + 1}: "));
 		if(num < 0 or num > 9):
-			print("Invalid length of number or invalid input");
+			print("Invalid length of number or invalid input... digits should be between 0 - 9.");
 			break;
 		else:
 
