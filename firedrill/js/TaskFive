@@ -1,0 +1,14 @@
+
+for(let counter = 4; counter < 10; counter += 4){
+if(counter % 4 == 0){
+console.log(counter);
+console.log(counter);
+console.log(counter);
+console.log(counter);
+console.log(counter);
+
+}
+}
+
+
+
