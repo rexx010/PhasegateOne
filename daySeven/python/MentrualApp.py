@@ -16,38 +16,34 @@ while(condition):
 		case '1':
 			print("Welcome to your calculater \n Enter your start date in this order(year, month, day): ");
 			year = int(input());
-			month = int(input());
-			day = int(input());
-			
+			if(year > 9999 or year < 1):
+				print("Year can't be more than 4 digits");
+				print();
+			else:
+				month = int(input());
+				if(month > 12 or month < 1):
+					print("Months can't be more than 12");
+					print();
+				else:
+					day = int(input());
+					if(day > 31 or day < 1):
+						print("Days can't be more than 30 or 31, or less than 1");
+						print();
+					else:
 
-			print("How many days is your cycle?: ");
-			cycle = int(input());
+						print("How many days is your cycle?: ");
+						cycle = int(input());
+						if(cycle < 21 or cycle > 35):
+							print("Cycle can't be more less than 21 or more than 35 days");
+							print();
+						else:
+							status = MentrualAppFunction.begin(year, month, day);
+							end = MentrualAppFunction.finish(year, month, day, cycle);
+							flow = MentrualAppFunction.flowDate(year, month, day);
+							ovu = MentrualAppFunction.ovulation(year, month, day, cycle);
+							fertile = MentrualAppFunction.fertileLength(year, month, day, cycle);
+							safety = MentrualAppFunction.safeperiod(year, month, day, cycle);
 
-
-			status = MentrualAppFunction.begin(year, month, day);
-			end = MentrualAppFunction.finish(year, month, day, cycle);
-			flow = MentrualAppFunction.flowDate(year, month, day);
-			ovu = MentrualAppFunction.ovulation(year, month, day, cycle);
-			fertile = MentrualAppFunction.fertileLength(year, month, day, cycle);
-			safety = MentrualAppFunction.safeperiod(year, month, day, cycle);
-
-
-			print(status);
-
-
-			print(end);
-
-
-			print(flow);
-
-
-			print(ovu);
-			
-
-			print(fertile);
-
-
-			print(safety);
 
 		case '0':
 			condition = False;

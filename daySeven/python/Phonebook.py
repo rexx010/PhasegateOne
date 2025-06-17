@@ -27,14 +27,20 @@ while(myCondition):
             firstName = input();
             print("Enter the second name...");
             secondtName = input();
-            print("Enter the phone number...");
-            phoneNumber = input();
-            print();
-            print("Contact saved...");
-            print(f"{firstName} {secondtName} : {phoneNumber}");
-            print();
-            PhonebookFunction.addContact(firstName, secondtName, phoneNumber);
+            while True:
+                print("Enter the phone number...");
+                PhoneNumber = input();
+                if len(PhoneNumber) != 11 and PhoneNumber[0] != '0' and  PhoneNumber[2] != '0':
+                    print("invalid length or invalid number... Try again");
+                elif PhoneNumber[1] != '7' and PhoneNumber[1] != '8' and PhoneNumber[1] != '9':
+                    print("Error, second number should be 7, 8, or 9... Try again");
+                else:
 
+                    print();
+                    print(f"{firstName} {secondtName} : {PhoneNumber}");
+                    print();
+                    PhonebookFunction.addContact(firstName, secondtName, PhoneNumber);
+                    break;
         case "2":
             PhonebookFunction.viewContact();
             print();
@@ -42,46 +48,47 @@ while(myCondition):
         case "3":
             print("Search contact by name");
             contactName = input();
-            PhonebookFunction.removeContact(contactName);
-            print("Contact deleted...");
+            output = PhonebookFunction.removeContact(contactName);
+            print(output);
             print();
 
         case "4":
-            print("Search contact by phoneNumber");
-            contactPhone = input();
-            print();
-            checking = [];
-            checking = PhonebookFunction.searchByPhone(contactPhone);
-            for item in checking:
-                print(item, end=" ");
-            print();
+            while True:
+                print("Search contact by phoneNumber");
+                PhoneNumber = input();
+                if len(PhoneNumber) != 11 and PhoneNumber[0] != '0' and  PhoneNumber[2] != '0':
+                    print("invalid length or invalid number... Try again");
+                elif PhoneNumber[1] != '7' and PhoneNumber[1] != '8' and PhoneNumber[1] != '9':
+                    print("Error, second number should be 7, 8, or 9... Try again");
+                else:
+                    print();
+                    checking = PhonebookFunction.searchByPhone(PhoneNumber);
+                    print(checking);
+                    print();
+                    break;
 
         case "5":
             print("Search contact by first name");
             contactFirstName = input();
             print();
-            checking = [];
             checking = PhonebookFunction.searchByfirstname(contactFirstName);
-            for item in checking:
-                print(item, end=" ");
+            print(checking);
             print();
 
         case "6":
-            print("Search contact by first name");
+            print("Search contact by last name");
             contactSecondName = input();
             print();
-            checking = [];
             checking = PhonebookFunction.searchBysecondname(contactSecondName);
-            for item in checking:
-                print(item, end=" ");
+            print(checking);
             print();
 
         case "7":
             print("Enter the contact's first name to edit the contact info");
             firstN = input();
             print();
-            PhonebookFunction.EditContact(firstN);
-            print("Contact edited");
+            info = PhonebookFunction.EditContact(firstN);
+            print(info);
             print();
 
         case "0":

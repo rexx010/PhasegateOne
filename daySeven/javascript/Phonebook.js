@@ -2,20 +2,15 @@ const input = require("prompt-sync");
 const prompt = input();
 
 
- phonebookList = []
+phonebookList = []
 checking = [];
 const addContact = function(firstName, lastName, PhoneNumber){
-if(PhoneNumber.length !== 11 && PhoneNumber.charAt(0) !== '0' &&  PhoneNumber.charAt(2) !== '0'){
-console.log("invalid length or invalid number... Try again");
-}else if(PhoneNumber.charAt(1) !== '7' && PhoneNumber.charAt(1) !== '8' && PhoneNumber.charAt(1) !== '9'){
-console.log("Error, second number should be 7, 8, or 9... Try again");
-}else{
 contact = [];
 contact.push(firstName);
 contact.push(lastName);
 contact.push(PhoneNumber);
 phonebookList.push(contact);
-}
+
 return phonebookList;
 }
 
@@ -32,28 +27,22 @@ console.log();
 
 const removeContact = function(name){
 for(let count = 0; count < phonebookList.length; count++){
-//ArrayList<String> checking = phonebookList.get(count);
 if(phonebookList[count][0] === name){
 phonebookList.splice(count, 1);
+return "Contact deleted..."
 }
 }
-
+return "Contact not found..."
 }
 
 
 const searchByPhone = function(phone){
-if(PhoneNumber.length !== 11 && PhoneNumber.charAt(0) !== '0' &&  PhoneNumber.charAt(2) !== '0'){
-console.log("invalid length or invalid number... Try again");
-}else if(PhoneNumber.charAt(1) !== '7' && PhoneNumber.charAt(1) !== '8' && PhoneNumber.charAt(1) !== '9'){
-console.log("Error, second number should be 7, 8, or 9... Try again");
-}else{
 for(let count = 0; count < phonebookList.length; count++){
 if(phonebookList[count][2] === phone){
-checking = phonebookList[count];
+return phonebookList[count];
 }
 }
-}
-return checking;
+return "Contact not found";
 }
 
 
@@ -61,10 +50,10 @@ const searchByfirstname = function(firstname){
 checking = [];
 for(let count = 0; count < phonebookList.length; count++){
 if(phonebookList[count][0] === firstname){
-checking = phonebookList[count];
+return phonebookList[count];
 }
 }
-return checking;
+return "Contact not found";
 }
 
 
@@ -72,10 +61,10 @@ const searchBysecondname = function(secondName){
 checking = [];
 for(let count = 0; count < phonebookList.length; count++){
 if(phonebookList[count][1] === secondName){
-checking = phonebookList[count];
+return phonebookList[count];
 }
 }
-return checking;
+return "Contact not found";
 }
 
 
@@ -95,8 +84,10 @@ checking.push(second);
 checking.push(phone);
 
 phonebookList[count] = checking;
+return "Contact edited";
 }
 }
+return "Contact not found";
 }
 
 
@@ -130,13 +121,25 @@ case "1":
 	let firstName = prompt();
 	console.log("Enter the second name...");
 	let secondtName = prompt();
+while(true){
 	console.log("Enter the phone number...");
-	let phoneNumber = prompt();
+	let PhoneNumber = prompt();
+	if(PhoneNumber.length !== 11 && PhoneNumber.charAt(0) !== '0' &&  PhoneNumber.charAt(2) !== '0'){
+	console.log("invalid length or invalid number... Try again");
+	}	
+	if(PhoneNumber.charAt(1) !== '7' && PhoneNumber.charAt(1) !== '8' && PhoneNumber.charAt(1) !== '9'){
+	console.log("Error, second number should be 7, 8, or 9... Try again");
+	}else{
 	console.log();
 	console.log("Contact saved...");
-	console.log(firstName+" "+secondtName+" : "+phoneNumber);
+	console.log(firstName+" "+secondtName+" : "+PhoneNumber);
 	console.log();
-	addContact(firstName, secondtName, phoneNumber);
+	addContact(firstName, secondtName, PhoneNumber);
+break;
+}
+}
+
+
 	break;
 case "2":
 	viewContact();
@@ -145,49 +148,51 @@ case "2":
 case "3":
 	console.log("Search contact by name");
 	let contactName = prompt();
-	removeContact(contactName);
-	console.log("Contact deleted...");
+	outcome = removeContact(contactName);
+	console.log(outcome);
 	console.log();
 	break;
 case "4":
+while(true){
 	console.log("Search contact by phoneNumber");
-	let contactPhone = prompt();
+	let PhoneNumber = prompt();
+	if(PhoneNumber.length !== 11 && PhoneNumber.charAt(0) !== '0' &&  PhoneNumber.charAt(2) !== '0'){
+	console.log("invalid length or invalid number... Try again");
+	}	
+	if(PhoneNumber.charAt(1) !== '7' && PhoneNumber.charAt(1) !== '8' && PhoneNumber.charAt(1) !== '9'){
+	console.log("Error, second number should be 7, 8, or 9... Try again");
+	}else{
 	console.log();
-	checking = [];
-	checking = searchByPhone(contactPhone);
-	for(let count = 0; count < checking.length; count++){
-	console.log(checking[count]+" ");
-	}
+	checking = searchByPhone(PhoneNumber);
+	console.log(checking);
 	console.log();
+break;
+}
+}
 	break;
 case "5":
 	console.log("Search contact by first name");
 	let contactFirstName = prompt();
 	console.log();
-	checking = [];
 	checking = searchByfirstname(contactFirstName);
-	for(let count = 0; count < checking.length; count++){
-	console.log(checking[count]+" ");
-	}
+	console.log(checking);
 	console.log();
 	break;
 case "6":
 	console.log("Search contact by first name");
 	let contactSecondName = prompt();
 	console.log();
-	checking = [];
 	checking = searchBysecondname(contactSecondName);
-	for(let count = 0; count < checking.length; count++){
-	console.log(checking[count]+" ");
-	}
+	console.log(checking);
 	console.log();
 	break;
+
 case "7":
 	console.log("Enter the contact's first name to edit the contact info");
 	let firstN = prompt();
 	console.log();
-	EditContact(firstN);
-	console.log("Contact edited");
+	let info = EditContact(firstN);
+	console.log(info);
 	console.log();
 	break;
 case "0":

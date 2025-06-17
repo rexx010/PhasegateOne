@@ -92,8 +92,20 @@ switch(userChoise){
 case '1':
 	console.log("Welcome to your calculater \n Enter your start date in this order(year, month, day): ");
 	let year = Number(prompt());
+	if(year > 9999 || year < 1){
+	console.log("Year can't be more than 4 digits");
+	console.log();
+	}else{
 	let month = Number(prompt());
+	if(month > 12 || month < 1){
+	console.log("Months can't be more than 12");
+	console.log();
+	}else{
 	let day = Number(prompt());
+	if(day > 30 || day > 31 || day < 1){
+	console.log("Days can't be more than 30 or 31, or less than 1");
+	console.log();
+	}else{
 	console.log();
 
 	console.log("How many days is your cycle?: ");
@@ -110,6 +122,10 @@ case '1':
 	console.log();
 
 	console.log("Your cycle starts on the "+status);
+	if(cycle < 21 || cycle > 35){
+	console.log("Cycle can't be more less than 21 or more than 35 days");
+	console.log();
+	}else{
 	console.log();
 
 	console.log("and your cycle ends on the "+end);
@@ -127,8 +143,12 @@ case '1':
 
 	console.log(safety);
 	console.log(); 
+}
+}
+}
+}
 	break;
-
+	
 case '0':
 	condition = false;
 	break;

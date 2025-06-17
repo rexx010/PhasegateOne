@@ -23,12 +23,28 @@ switch(userChoise){
 case 1:
 	System.out.println("Welcome to your calculater \n Enter your start date in this order(year, month, day): ");
 	int year = input.nextInt();
+	if(year > 9999 || year < 1){
+	System.out.println("Year can't be more than 4 digits");
+	System.out.println();
+	}else{
 	int month = input.nextInt();
+	if(month > 12 || month < 1){
+	System.out.println("Months can't be more than 12");
+	System.out.println();
+	}else{
 	int day = input.nextInt();
+	if(day > 31 || day < 1){
+	System.out.println("Days can't be more than 30 or 31, or less than 1");
+	System.out.println();
+	}else{
 	System.out.println();
 
 	System.out.println("How many days is your cycle?: ");
 	int cycle = input.nextInt();
+	if(cycle < 21 || cycle > 35){
+	System.out.println("Cycle can't be more less than 21 or more than 35 days");
+	System.out.println();
+	}else{
 	System.out.println();
 
 
@@ -58,6 +74,10 @@ case 1:
 
 	System.out.println(safety);
 	System.out.println(); 
+}
+}
+}
+}
 	break;
 
 case 0:
